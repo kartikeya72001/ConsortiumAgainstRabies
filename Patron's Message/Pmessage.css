@@ -1,0 +1,90 @@
+html {
+    overflow-x: hidden;
+}
+.header
+{
+    padding: 20px;
+    align-content: center;
+    text-align: center;
+}
+.list{
+    font-size: 23px;
+}
+.disclamer{
+    font-size: 8px;
+    color:#333;
+}
+body{
+  background-image:url('https://pixelz.cc/wp-content/uploads/2017/11/minimalist-background-uhd-8k-wallpaper.png');
+    background-size:contain;
+}
+.home{
+    margin-left:0.5%;
+    margin-right:0.5%;
+}
+.Logo{
+    padding: 0px;
+    margin-bottom: 5px;
+    border: none;
+    border-color: black;
+    padding:5px;
+    border-radius: 15px;
+}
+.moto{
+    font-weight:700;
+    color:black;
+    margin: 0px;
+    padding: 0px;
+    font-size: 35px;
+}
+.heading{
+    font-size: 78px;
+    color:black;
+    font-weight: 800;
+    text-decoration: none;
+    font-family: 'Rokkitt', serif;
+    padding: 6px;
+    border-radius: 5px;
+}
+.heading:hover{
+    color:chartreuse;
+}
+.heading:active{
+    color:green;
+}
+.Pmessage{
+    color:black;
+    font-size: 50px;
+    background-color: #777;
+}
+.footer{
+    font-size:12px;
+    background-color: #666;
+    text-align: center;
+}
+.PPic{
+    text-align: center;
+}
+.Ppic{
+    border: solid 2px;
+    padding:2px;
+    border-radius: 5px;
+    border-color:black;
+}
+.message{
+    background-color: rgba(211,211,211,0.7);
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.signature{
+    text-align: left;
+}
+
+
+
+
+
+

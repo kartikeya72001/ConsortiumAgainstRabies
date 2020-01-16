@@ -1,0 +1,125 @@
+html {
+    overflow-x: hidden;
+}
+.header
+{
+    padding: 20px;
+    align-content: center;
+    text-align: center;
+}
+.list{
+    font-size: 23px;
+}
+body{
+  background-image:url('https://pixelz.cc/wp-content/uploads/2017/11/minimalist-background-uhd-8k-wallpaper.png');
+    background-size:contain;
+}
+.home{
+    margin-left:0.5%;
+}
+.active{
+    background-color: darkgreen;
+}
+.Logo{
+    padding: 0px;
+    margin-bottom: 5px;
+    border: none;
+    border-color: black;
+    padding:5px;
+    border-radius: 15px;
+}
+.moto{
+    font-weight:700;
+    color:black;
+    margin: 0px;
+    padding: 0px;
+    font-size: 35px;
+}
+.heading{
+    font-size: 78px;
+    color:black;
+    font-weight: 800;
+    text-decoration: none;
+    font-family: 'Rokkitt', serif;
+    padding: 6px;
+    border-radius: 5px;
+}
+.heading:hover{
+    color:chartreuse;
+}
+.heading:active{
+    color:green;
+}
+.Pmessage{
+    color:black;
+    font-size: 50px;
+    background-color: #777;
+}
+.footer{
+    font-size:12px;
+    background-color: #666;
+    text-align: center;
+}
+.abc{
+    text-align: center;
+    background-color: rgba(150,150,150,0.7);
+    margin-left: 25%;
+    margin-right: 25%;
+
+}
+.para{
+    text-align: center;
+    background-color: rgba(250,220,0,0.7);
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.pdf{
+    text-align: center;
+}
+.disclamer{
+    font-size: 8px;
+    color:#333;
+}
+.links{
+    text-decoration: none;
+    
+}
+.images{
+    text-align: center;
+    background-color: rgba(211,211,211,0.7);
+    margin-right:6%;
+    padding-top:5%;
+    padding-bottom:5%;
+    margin-left:6%;
+    
+}
+.txt{
+    text-align: center;
+    background-color: rgba(211,211,211,0.5);
+    margin-left: 15%;
+    margin-right:15%;
+}
+.vid{
+    text-align: center;
+}
+.image{
+    width:400px;
+    height:300px;
+    border-radius: 10px;
+}
+.img{
+    text-align: center;
+}
+.image:hover{
+    transition: transform .5s;
+    transform: scale(1.5);
+    border:solid;
+    padding:0;
+    border-radius: 5%;
+}
+
+
+
+
+
+
