@@ -93,6 +93,16 @@ body{
     margin-left:6%;
     
 }
+.images2{
+    text-align: center;
+    background-color: rgba(211,211,211,0.7);
+    margin-right:6%;
+    padding-top:5%;
+    width:30%;
+    height: :30%;
+    padding-bottom:5%;
+    margin-left:6%;
+}
 .img{
     border: solid 2px;
     padding:3px;
