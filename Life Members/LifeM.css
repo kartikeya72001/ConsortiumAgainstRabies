@@ -12,10 +12,8 @@ html {
 }
 body{
     background-image:url("Wallpaper%20-%20Copy.jpeg");
--webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;}
+    background-size:contain;
+}
 .active{
     background-color: darkgreen;
 }
