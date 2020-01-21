@@ -16,8 +16,10 @@ html {
 }
 body{
   background-image:url("Wallpaper.jpeg");
-    background-size:contain;
-}
+-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;}
 .Logo{
     padding: 0px;
     margin-bottom: 5px;

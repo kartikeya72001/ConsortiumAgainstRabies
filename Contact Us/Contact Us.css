@@ -12,8 +12,10 @@ html {
 }
 body{
   background-image:url("Wallpaper%20-%20Copy.jpeg");
-    background-size:contain;
-}
+-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;}
 .contact-form{
     width: 85%;
     max-width: 600px;
