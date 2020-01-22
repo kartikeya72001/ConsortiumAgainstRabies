@@ -3,6 +3,8 @@ html {
 }
 .header
 {
+    background-image:url("Wallpaper.jpg");
+    background-size:cover;
     padding: 20px;
     align-content: center;
     text-align: center;
@@ -11,11 +13,7 @@ html {
     font-size: 23px;
 }
 body{
-    background-image:url("Wallpaper%20-%20Copy.jpeg");
--webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;}
+}
 .disclamer{
     font-size: 8px;
     color:#333;
@@ -28,6 +26,9 @@ body{
     padding-right: 0.5%;
 }
 .Logo{
+    background-color: #F2AC29;
+    background-image: linear-gradient(#F2AC29,#F2C029);
+    box-shadow: 2px 2px 2px 2px;
     padding: 0px;
     margin-bottom: 5px;
     border: none;
@@ -36,9 +37,13 @@ body{
     border-radius: 15px;
 }
 .moto{
+    margin-right: 30%;
+    margin-left: 30%;
+    box-shadow: 2px 2px 2px 2px;
+    background-color: #F2AC29;
+    background-image: linear-gradient(#F2AC29,#F2C029);
     font-weight:700;
     color:black;
-    margin: 0px;
     padding: 0px;
     font-size: 30px;
 }
@@ -58,12 +63,14 @@ body{
     color:green;
 }
 .Pmessage{
+    box-shadow: 2px 2px 2px 2px;
     color:black;
     background-color: #777;
 }
 .footer{
     font-size:12px;
     background-color: #666;
+    position: absolute;
     text-align: center;
 }
 .message{
@@ -90,10 +97,20 @@ body{
   clear: both;
 }
 .membership{
+    background-color:#9E91F2;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 5%;
+    margin: 5%;
     text-align: center;
 }
 .presentation{
     text-align: center;
+    background-color:#9E91F2;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 5%;
+    margin: 5%;
 }
 .pdf{
     float: left;
@@ -102,6 +119,11 @@ body{
     float: right;
 }
 .links{
+    background-color:#9E91F2;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px;
+    padding: 5%;
+    margin: 5%;
     text-align: center;
 }
 

@@ -3,6 +3,8 @@ html {
 }
 .header
 {
+    background-image: url("Wallpaper.jpg");
+    background-size:cover;
     padding: 20px;
     align-content: center;
     text-align: center;
@@ -14,13 +16,10 @@ html {
     background-color: darkgreen;
     margin-right: 0.5%;
 }
-body{
-  background-image:url("Wallpaper.jpeg");
--webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;}
 .Logo{
+    background-color: #F2AC29;
+    background-image: linear-gradient(#F2AC29,#F2C029);
+    box-shadow: 2px 2px 2px 2px;
     padding: 0px;
     margin-bottom: 5px;
     border: none;
@@ -29,11 +28,15 @@ body{
     border-radius: 15px;
 }
 .moto{
+    background-color: #F2AC29;
+    background-image: linear-gradient(#F2AC29,#F2C029);
+    box-shadow: 2px 2px 2px 2px;
     font-weight:700;
     color:black;
-    margin: 0px;
     padding: 0px;
     font-size: 30px;
+    margin-right: 30%;
+    margin-left: 30%;
 }
 .heading{
     font-size: 80px;
@@ -52,6 +55,7 @@ body{
 }
 .abtus{
     color:black;
+    box-shadow: 2px 2px 2px 2px;
     background-color: #777;
 }
 .footer{

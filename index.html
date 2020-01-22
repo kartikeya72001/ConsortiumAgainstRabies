@@ -14,10 +14,11 @@ body {
     
     
 .navbar {
-  overflow: hidden;
-  background-color: #333;
-list-style-type: none;
-  overflow: hidden;
+    box-shadow: 2px 2px 2px 2px;
+    overflow: hidden;
+    background-color: #333;
+    list-style-type: none;
+    overflow: hidden;
     top: 0;
     z-index: 9999;
 }
@@ -55,7 +56,7 @@ list-style-type: none;
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #333;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -83,7 +84,7 @@ list-style-type: none;
 .column {   
     margin: 5px;
     background-color: #B0E0E6; /* For browsers that do not support gradients */
-    background-image: linear-gradient(#B0E0E6, #B0E0E6); /* Standard syntax (must be last) */
+    background-image: linear-gradient(rgba(51,204,51,0.7), rgba(0,153,51,0.7)); /* Standard syntax (must be last) */
     color:black;
     font-size: 23px;
     text-align: center;
@@ -92,6 +93,7 @@ list-style-type: none;
     border-radius: 10px;
     float: left;
     width: 29%;
+    box-shadow: 4px 4px 4px 4px;
     height:340px;
     padding: 10px;
     transition: transform .4s;
@@ -102,7 +104,7 @@ list-style-type: none;
 .column2 {   
     margin: 5px;
     background-color: #9afd4f; /* For browsers that do not support gradients */
-    background-image: linear-gradient(#c9ff9b,#c9ff9b); /* Standard syntax (must be last) */
+    background-image: linear-gradient(rgba(102,0,204,0.7),rgba(51,51,153,0.7)); /* Standard syntax (must be last) */
     color:black;
     font-size: 23px;
     text-align: center;
@@ -111,6 +113,7 @@ list-style-type: none;
     border-radius: 10px;
     float: left;
     width: 29%;
+    box-shadow: 4px 4px 4px 4px;
     height:340px;
     padding: 10px;
     transition: transform .4s;
@@ -122,7 +125,7 @@ list-style-type: none;
     margin: 5px;
     margin-left:60px;
     background-color: pink; /* For browsers that do not support gradients */
-    background-image: linear-gradient(pink, pink); /* Standard syntax (must be last) */
+    background-image: linear-gradient(rgba(204,0,102,0.7), rgba(255,51,153,0.7)); /* Standard syntax (must be last) */
     color:black;
     text-align: center;
     font-size: 23px;
@@ -132,6 +135,7 @@ list-style-type: none;
     float: left;
     width: 29%;
     height:340px;
+    box-shadow: 4px 4px 4px 4px;
     padding: 10px;
     transition: transform .4s;
 }
@@ -175,10 +179,12 @@ list-style-type: none;
 <body>
 
 <div class="header">
-  <a class="heading" href="index.html">Consortium Against Rabies</a>
-    <br>
+    <div class="head">
+        <a class="heading" href="index.html">Consortium Against Rabies</a>
+</div>
     <br>
     <p class="moto">Let us strive to make India Rabies free</p>
+    <br>
     <img class="Logo" src="Logo.jpg" width="128" height="128">
 </div>
 

@@ -3,6 +3,8 @@ html {
 }
 .header
 {
+    background-image:url("Wallpaper.jpg");
+    background-size:cover;
     padding: 20px;
     align-content: center;
     text-align: center;
@@ -11,11 +13,7 @@ html {
     font-size: 23px;
 }
 body{
-  background-image:url("Wallpaper%20-%20Copy.jpeg");
--webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;}
+}
 .contact-form{
     width: 85%;
     max-width: 600px;
@@ -85,6 +83,9 @@ body{
     margin-left:0.5%;
 }
 .Logo{
+    background-color: #F2AC29;
+    background-image: linear-gradient(#F2AC29,#F2C029);
+    box-shadow: 2px 2px 2px 2px;
     padding: 0px;
     margin-bottom: 5px;
     border: none;
@@ -93,9 +94,13 @@ body{
     border-radius: 15px;
 }
 .moto{
+    margin-right: 30%;
+    margin-left: 30%;
+    box-shadow: 2px 2px 2px 2px;
+    background-color: #F2AC29;
+    background-image: linear-gradient(#F2AC29,#F2C029);
     font-weight:700;
     color:black;
-    margin: 0px;
     padding: 0px;
     font-size: 35px;
 }
@@ -124,6 +129,7 @@ body{
 }
 .footer{
     font-size:12px;
+    position: absolute;
     background-color: #666;
     text-align: center;
 }

@@ -3,6 +3,8 @@ html {
 }
 .header
 {
+    background-image:url("Wallpaper.jpg");
+    background-size:cover;
     padding: 20px;
     align-content: center;
     text-align: center;
@@ -11,15 +13,14 @@ html {
     font-size: 23px;
 }
 body{
-  background-image:url("Wallpaper%20-%20Copy.jpeg");
--webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;}
+}
 .home{
     margin-left:0.5%;
 }
 .Logo{
+    background-color: #F2AC29;
+    background-image: linear-gradient(#F2AC29,#F2C029);
+    box-shadow: 2px 2px 2px 2px;
     padding: 0px;
     margin-bottom: 5px;
     border: none;
@@ -28,9 +29,13 @@ body{
     border-radius: 15px;
 }
 .moto{
+    margin-right: 30%;
+    margin-left: 30%;
+    box-shadow: 2px 2px 2px 2px;
+    background-color: #F2AC29;
+    background-image: linear-gradient(#F2AC29,#F2C029);
     font-weight:700;
     color:black;
-    margin: 0px;
     padding: 0px;
     font-size: 35px;
 }
@@ -50,6 +55,7 @@ body{
     color:green;
 }
 .Pmessage{
+    box-shadow: 2px 2px 2px 2px;
     color:black;
     font-size: 50px;
     background-color: #777;
@@ -61,6 +67,7 @@ body{
 .footer{
     font-size:12px;
     background-color: #666;
+    position: absolute;
     text-align: center;
 }
 .PPic{
@@ -73,12 +80,14 @@ body{
     border-color:black;
 }
 .message{
-    background-color: rgba(211,211,211,0.7);
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
     text-align: center;
     padding-left: 15px;
     padding-right: 15px;
+    box-shadow: 2px 2px 2px 2px;
+    border-radius: 8px;
+    background-color: rgba(65,42,128,0.7);
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 }
 .signature{
     text-align: left;
