@@ -88,8 +88,10 @@ body{
     background-color:rgba(127,255,212,0.5);
     box-shadow: 2px 2px 2px 2px;
     border-radius: 5px;
-    margin-left: 8%;
-    margin-right: 8%;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 .hd{
     text-align: center;
