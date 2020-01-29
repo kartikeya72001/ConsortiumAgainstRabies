@@ -1,0 +1,99 @@
+html {
+    overflow-x: hidden;
+}
+.header
+{
+    background-image:url("Wallpaper.jpg");
+    background-size:cover;
+    padding: 20px;
+    align-content: center;
+    text-align: center;
+}
+.list{
+    font-size: 23px;
+}
+body{
+}
+.disclamer{
+    font-size: 8px;
+    color:#333;
+}
+.home{
+    margin-left:0.5%;
+}
+.Logo{
+    background-color: #F2AC29;
+    background-image: linear-gradient(#F2AC29,#F2C029);
+    box-shadow: 2px 2px 2px 2px;
+    padding: 0px;
+    margin-bottom: 5px;
+    border: none;
+    border-color: black;
+    padding:5px;
+    border-radius: 15px;
+}
+.moto{
+    margin-right: 30%;
+    margin-left: 30%;
+    box-shadow: 2px 2px 2px 2px;
+    background-color: #F2AC29;
+    background-image: linear-gradient(#F2AC29,#F2C029);
+    font-weight:700;
+    color:black;
+    padding: 0px;
+    font-size: 35px;
+}
+.heading{
+    font-size: 78px;
+    color:black;
+    font-weight: 800;
+    text-decoration: none;
+    font-family: 'Rokkitt', serif;
+    padding: 6px;
+    border-radius: 5px;
+}
+.heading:hover{
+    color:chartreuse;
+}
+.heading:active{
+    color:green;
+}
+.Pmessage{
+    box-shadow: 2px 2px 2px 2px;
+    color:black;
+    font-size: 50px;
+    background-color: #777;
+}
+.footer{
+    vertical-align:bottom;
+    font-size:12px;
+    position: absolute;
+    background-color: #666;
+    text-align: center;
+}
+.abc{
+    text-align: center;
+    background-color: rgba(150,150,150,0.7);
+    margin-left: 32%;
+    margin-right: 32%;
+
+}
+.centered1{
+    background-color: rgba(255,0,0,0.6);
+    padding: 2%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5%;
+    margin-left:20%;
+    margin-right:20%;
+}
+.centered2{
+    background-color: rgba(0,0,0,0.8);
+    color:aliceblue;
+    padding: 2%;
+    border-radius: 10px;
+    text-align: center;
+    margin: 5%;
+    margin-left:20%;
+    margin-right:20%;
+}
