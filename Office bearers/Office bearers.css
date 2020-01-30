@@ -97,7 +97,18 @@ body{
     font-size: 8px;
     color:#333;
 }
-
+.RAY{
+    background-image: linear-gradient(dodgerblue,deepskyblue);
+    margin-left: 35%;
+    margin-right:35%;
+    border-radius: 12px;
+    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: 600;
+}
 
 
 
