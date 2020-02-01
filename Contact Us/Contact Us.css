@@ -14,60 +14,6 @@ html {
 }
 body{
 }
-.contact-form{
-    width: 85%;
-    max-width: 600px;
-    background: #f1f1f1f1;
-    margin-left:30%;
-    border-radius: 5px;
-    padding: 30px 40ps;
-    box-sizing: border-box;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.2);
-    font-family: "Monteserrat", sans-serif;
-}
-.contact-form h1{
-    margin-top: 0;
-    font-weight: 200;
-}
-.txtb{
-    border: 1px solid gray;
-    margin: 8px 20px;
-    padding: 12px 18px;
-    border-radius: 8px;
-    
-}
-.txtb label{
-    display: block;
-    text-align: left;
-    color: #333;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-.txtb input, .txtb textarea{
-    width= 100%;
-    border: none;
-    background: none;
-    outline: none;
-    font-size: 18px;
-    margin-top:6px;
-}
-.sbtn{
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    padding-top:10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    color: white;
-    text-transform: uppercase;
-    cursor: pointer;
-    margin-top:3px;
-    width: 100%;
-}
-
-
 .disclamer{
     font-size: 8px;
     color:#333;
