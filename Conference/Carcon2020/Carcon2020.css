@@ -112,6 +112,28 @@ body{
     color: aliceblue;
     font-weight: 600;
 }
+div.abc {
+    background-color:rgba(127,255,212,0.5);
+    box-shadow: 2px 2px 2px 2px;
+    border-radius: 5px;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding:5%;
+}
+
+@media screen and (min-width: 601px) {
+  div.abc {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.abc {
+    font-size: 44px;
+  }
+}
 
 
 

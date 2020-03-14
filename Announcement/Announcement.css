@@ -70,13 +70,6 @@ body{
     background-color: #666;
     text-align: center;
 }
-.abc{
-    box-shadow: 2px 2px 2px 2px;
-    text-align: center;
-    background-color: rgba(150,150,150,0.7);
-    margin-left: 25%;
-    margin-right: 25%;
-}
 .RAY{
     background-image: linear-gradient(dodgerblue,deepskyblue);
     margin-left: 35%;
@@ -88,6 +81,26 @@ body{
     text-decoration: none;
     color: aliceblue;
     font-weight: 600;
+}
+div.abc {
+    font-size: 28px;
+    box-shadow: 2px 2px 2px 2px;
+    text-align: center;
+    background-color: rgba(150,150,150,0.7);
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+@media screen and (min-width: 601px) {
+  div.abc {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div.abc {
+    font-size: 44px;
+  }
 }
 
 
