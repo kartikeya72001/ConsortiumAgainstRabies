@@ -14,6 +14,33 @@
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(253, 245, 230,0.2);
+    opacity: 0.9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+    font-weight: 800;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: darkviolet;}
+
+.dropdown:hover .dropdown-content {display: block;}
+</style>
 </head>
 
 <body>
@@ -38,7 +65,16 @@
 						<div class="main_nav_container ml-auto">
 							<ul class="main_nav_list">
 								<li class="main_nav_item"><a href="#">home</a></li>
-								<li class="main_nav_item"><a href="Patron's Message/Pmessage.html">Messages</a></li>
+                                <div class="dropdown">
+								<li class="main_nav_item dropbtn"><a href="">Messages</a></li>
+                                    <div class="dropdown-content">
+                                    <a href="Patron's Message/Pmessage.html">Patron</a>
+                                    <a href="../president/President.html">President</a>
+                                    <a href="../VP/VP.html">Vice President</a>
+                                    <a href="../General Secretory/General Secretary.html">Hony. Secratory</a>
+                                    <a href="../Hon Secretory/Hon Secretory.html">Secratory</a>
+                                    </div>
+                                </div>
 								<li class="main_nav_item"><a href="Activities/Activities.html">Activities</a></li>
 								<li class="main_nav_item"><a href="Gallery/Gallery.html">Gallery</a></li>
 								<li class="main_nav_item"><a href="Contact Us/Contact Us.html">Contact Us</a></li>
@@ -88,7 +124,16 @@
 			<div class="logo menu_logo"><a href="#"><img src="Logo.jpg" alt=""></a></div>
 			<ul>
 				<li class="menu_item"><a href="index.html">home</a></li>
-				<li class="menu_item"><a href="Patron's Message/Pmessage.html">Messages</a></li>
+				 <div class="dropdown">
+                <li class="menu_item"><a style="color: white;">Messages</a></li>
+                     <div class="dropdown-content">
+                                    <a href="Patron's Message/Pmessage.html">Patron</a>
+                                    <a href="../president/President.html">President</a>
+                                    <a href="../VP/VP.html">Vice President</a>
+                                    <a href="../General Secretory/General Secretary.html">Hony. Secratory</a>
+                                    <a href="../Hon Secretory/Hon Secretory.html">Secratory</a>
+                                    </div>
+                </div>
 				<li class="menu_item"><a href="Activities/Activities.html">Activities</a></li>
 				<li class="menu_item"><a href="Gallery/Gallery.html">Gallery</a></li>
 				<li class="menu_item"><a href="Contact Us/Contact Us.html">contact us</a></li>
