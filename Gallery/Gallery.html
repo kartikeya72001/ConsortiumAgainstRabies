@@ -26,6 +26,32 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(253, 245, 230,0.8);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+    font-weight: 800;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: lightpink;}
+
+.dropdown:hover .dropdown-content {display: block;}
+</style>
   </head>
   <body>
 
@@ -37,7 +63,18 @@
 				<ul>
 					<li><a href="../index.html">Home</a></li>
 					<li class="colorlib-active"><a href="Gallery.html">Gallery</a></li>
-                    <li><a href="../Patron's Message/Pmessage.html">Messages</a></li>
+                    
+                     <div class="dropdown">
+                    <li><a>Messages</a></li>
+                         <div class="dropdown-content">
+                                    <a href="Patron's Message/Pmessage.html">Patron</a>
+                                    <a href="../president/President.html">President</a>
+                                    <a href="../VP/VP.html">Vice President</a>
+                                    <a href="../General Secretory/General Secretary.html">Hony. Secratory</a>
+                                    <a href="../Hon Secretory/Hon Secretory.html">Secratory</a>
+                                    </div>
+                    </div>
+                    
                     <li><a href="../Office bearers/Office bearers.html">Office Bearers</a></li>
 					<li><a href="../Activities/Activities.html">Activities</a></li>
 					<li><a href="../Downloads/Downloads.html">Downloads</a></li>
