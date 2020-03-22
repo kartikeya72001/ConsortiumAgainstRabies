@@ -1,229 +1,104 @@
-<!DOCTYPE html>
-<html>
-    
-    
-    
-    
-    
-    
+<!doctype html>
+<html lang="en">
 <head>
-    <link rel="shortcut icon" href="Logo.jpg">
-<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=0.3">
-<style>
-body {
-  font-size: 28px;
-}
-
-    
-    
-.navbar {
-    box-shadow: 2px 2px 2px 2px;
-    overflow: hidden;
-    background-color: #333;
-    list-style-type: none;
-    overflow: hidden;
-    top: 0;
-    z-index: 9999;
-}
-
-.navbar a {
- 
-    margin-left: 28px;
-    float: left;
-    font-size: 25px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    padding-bottom:0.5%;
-    text-decoration: none;
-}
-
-.dropdown {
-  float: left;
-    background-color: darkgreen;
-    padding-right: 0.5%;
-    padding-bottom: 0.5%;
-  overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 27px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-    padding-right: 0.2%;
-    padding-bottom: 0px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #000;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #333;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-    color:black;
-    background-color: #333;
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #555;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}    
-    
-    
- 
-    .dropdown1 {
-  float: left;
-    background-color: #333;
-    padding-right: 0.5%;
-  overflow: hidden;
-}
-
-.dropdown1 .dropbtn {
-  font-size: 27px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-    padding-right: 0.2%;
-    padding-bottom: 0px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-    .dropdown1:hover .dropdown-content {
-  display: block;
-}
-    
-    
-    
-    
-
-
-
-@media screen and (max-width:600px) {
-  .column1 {
-    width: 100%;
-  }
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
-    <link href="President.css" rel="stylesheet">
-    <title>President's Message</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="Logo.jpg" type="image/png">
+    <title>CARCON-OFFICE BEARERS</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        h3{
+            color: black;
+        }
+        p{
+            color: black;
+        }
+    </style>
 </head>
-    
-    
-    
-    
-    
 <body>
 
-<div class="header">
-  <a class="heading" href="../index.html">Consortium Against Rabies</a>
-    <br>
-    <p class="moto">Let us strive to make India Rabies free</p>
-    <br>
-    <img class="Logo" src="Logo.jpg" width="128" height="128">
-</div>
-    
+    <!--================Header Menu Area =================-->
+    <header class="header_area">	
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="../index.html"><img src="Logo.jpg" alt="" style="width: 2rem; height: 2rem; border-radius: 50%;"> CARCON</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li> 
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Messages</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="../Patron's Message/Pmessage.html">Patron</a></li> 
+                                    <li class="nav-item"><a class="nav-link" href="../president/President.html">President</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../VP/VP.html">Vice President</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../General Secretory/General Secretary.html">Hony. Secratory</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../Hon Secretory/Hon Secretory.html">Secratory</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="feature.html">Activities</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="price.html">Gallery</a></li>     
+                            <li class="nav-item submenu dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CARCON</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link" href="../Conference/Carcon2020/Carcon2020.html">CARCON-2020</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../Conference/CARCON2019/Carcon2019.html">CARCON-2019</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../Conference/Carcon2018/Carcon2018.html">CARCON-2018</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../Conference/Carcon2017/Carcon2017.html">CARCON-2017</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../Conference/Carcon%202014/Carcon2014.html">CARCON-2014</a></li>
+                                </ul>
+                            </li> 
+                            <li class="nav-item"><a class="nav-link" href="../Contact Us/Contact Us.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================Header Menu Area =================-->
 
-    
-<div class="navbar" >
-    <a href="../index.html" class="home">Home</a>
-        
-        
-    <div class="dropdown">
-    <button class="dropbtn">Messages 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-        <a href="../Patron's Message/Pmessage.html">Patron's Message</a>
-      <a href="../president/President.html">President's Message</a>
-      <a href="../VP/VP.html">Vice President's Message</a>
-        <a href="../General Secretory/General Secretary.html">Hony Secretory General's Message</a>
-      <a href="../Hon Secretory/Hon Secretory.html">Secretary's Message</a>
-    </div>
-  </div>
-        
-        
-        <a href="../Office bearers/Office bearers.html">Office Bearers</a>
-        <a href="../Downloads/Downloads.html">Downloads</a>
-        <a href="../Activities/Activities.html">Activities</a>
-        <a href="../Gallery/Gallery.html">Gallery</a>
-        <a href="../Life Members/LifeM.html">Life Members</a>
-        <div class="dropdown1">
-            <button class="dropbtn">Conference
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-            <a href="../Conference/Carcon2020/Carcon2020.html">CARCON 2020</a>
-            <a href="../Conference/CARCON2019/Carcon2019.html">CARCON 2019</a>
-            <a href="../Conference/Carcon2018/Carcon2018.html">CARCON 2018</a>
-            <a href="../Conference/Carcon2017/Carcon2017.html">CARCON 2017</a>
-            <a href="../Conference/Carcon 2014/Carcon2014.html">CARCON 2014</a>
+    <!--================Home Banner Area =================-->
+    <section class="home_banner_area">
+        <div class="banner_inner d-flex align-items-center" style="background-image: url(Wallpapernew.jpg); background-size: cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-6 col-xl-5 offset-xl-1">
+                        <div class="banner_content">
+                            <h3>CONSORTIUM<br/> AGAINST RABIES</h3>
+                            <p>Let us strive to make India Rabies free !!</p>
+                            <a class="banner_btn" href="../RabiesAndYou.html">Rabies And You<i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-    <a href="../Contact Us/Contact Us.html">Contact Us</a>  
-</div>
-    
-    
-    <br>
-<marquee bgcolor="#999" loop="-1"
-
-scrollamount="12" width="100%"
-         onmouseover="this.stop();"
-        onmouseout="this.start();"> 
-<a href="../Announcement/Announcement.html" style="color: blue">Announcement of CARCON-2020 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../Updated guidelines/UpdatedG.html" style="color: blue"> Updated Guidelines for Animal Bite Management 2020</a>
-</marquee>
-    
-    <div class="RAY">
-            <a href="../RabiesAndYou.html" style="color:black">Rabies And You</a></div>
-    
-<div>
-    <h2 class="Pmessage"><center>President's Message</center></h2>
-</div>
-    <div class="PPic" >
-        <img class="Ppic" src="G P Kaushal photo.jpg" width="144" height="144">
-        <h5><strong>Dr. G.P Kaushal</strong></h5>
-    </div>
-    <div class="message">
-        <p>Dear Colleagues,</p>
-        
-        <p>Formation of Consortium against Rabies (CAR) was conceived and implemented In 2009 with an idea to do something different in the field of Rabies prevention especially in the Northern states of India. There has been considerable brain storming amongst the likeminded determined experts in the field so that the objectives and vision of this association are achieved & well sustained in times to come. This Journey started with 15 members under the lead & guidance of Dr. Kanan, first President of CAR and dynamism of Dr. Anurag Aggarwal, 1st Secretary General of CAR. I feel proud to announce that today we are a family of more than 160 members. These members have joined us only when they are fully convinced with the concept/objective and are determined to work for the same.</p>
+    </section>
+    <section class="about-area area-padding-bottom">
+        <div class="container" style=" padding-right: 0px; margin-right: 0px;">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="area-heading">
+                            <img src="G%20P%20Kaushal%20photo.jpg" style="height: 12rem; width: 10rem;">
+                        <h4>From the President<br>Dr. G.P Kaushal </h4>
+                    </div>
+                    <p>Formation of Consortium against Rabies (CAR) was conceived and implemented In 2009 with an idea to do something different in the field of Rabies prevention especially in the Northern states of India. There has been considerable brain storming amongst the likeminded determined experts in the field so that the objectives and vision of this association are achieved & well sustained in times to come. This Journey started with 15 members under the lead & guidance of Dr. Kanan, first President of CAR and dynamism of Dr. Anurag Aggarwal, 1st Secretary General of CAR. I feel proud to announce that today we are a family of more than 160 members. These members have joined us only when they are fully convinced with the concept/objective and are determined to work for the same.</p>
         
         <p>So far, we are successful in carrying activities in 5-6 states through our annual conferences and other midterm CMEs. These annual events have the distinction of being organized in regional Medical Colleges, where we feel that sharing of updated knowledge has maximal impact in terms of benefits to the society at large.</p>
         
@@ -231,15 +106,20 @@ scrollamount="12" width="100%"
         
         <p>We hope that you enjoy the fresh look, periodic updations of this website and also find that this portal serves as a valuable resource for you in the field of Rabies and other zoonotic diseases. </p>
         <p>Long Live CAR!</p>
-        
-        <div class="signature" ><p>Dr. G.P Kaushal<br>President<br>Consortium Against Rabies</p></div>
-    </div>
-    <br>
-<footer class="footer">
-  <p>Posted by: Kartikeya Agarwal<br>
-  Contact information: <a href="mailto:consortiumagainstrabies@gmail.com">consortiumagainstrabies@gmail.com</a>.</p>
-    <p class="disclamer">Disclaimer: The data contained in this website is intended for general reference only and is meant for viewers in India only. It may refer to pharmaceutical products, diagnostic techniques, therapeutics or indications not yet registered or approved in a given country and it should be noted that, over time, currency and completeness of the data may change. For updated information, please contact the Company. This data should not be used to diagnose, treat, cure or prevent any disease without the professional advice of a Registered Medical Practitioner, and does not replace medical advice or a thorough medical examination. Registered Medical Practitioners should use their independent professional judgement in checking the symptoms, diagnosing & suggesting the appropriate line of treatment for patients.</p>
-</footer>
+                </div>
+            </div>
+        </div>
+    </section>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="js/jquery.ajaxchimp.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/jquery.form.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/mail-script.js"></script>
+<script src="js/theme.js"></script>
 </body>
 </html>
-    
