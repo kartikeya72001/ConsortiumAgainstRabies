@@ -71,9 +71,9 @@ body{
 }
 .abc{
     border-radius: 8px;
-    box-shadow: 2px 2px 2px 2px;
+    box-shadow: 1px 1px 1px 1px;
     text-align: center;
-    background-color: rgba(150,150,150,0.7);
+    background-color: rgba(150,150,150,0.5);
     margin-left: 25%;
     margin-right: 25%;
 
@@ -82,9 +82,10 @@ body{
     border-radius: 8px;
     box-shadow: 2px 2px 2px 2px;
     text-align: center;
-    background-color: rgba(250,220,0,0.7);
-    margin-left: 10%;
-    margin-right: 10%;
+    background-color: rgba(250,220,0,0.5);
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-right: 15%;
 }
 .pdf{
     text-align: center;
