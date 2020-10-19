@@ -1,94 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>CARCON-Gallery</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
 
-<head>
-	<title>CARCON-Gallery</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
 
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/aos.css">
 
-	<link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-	<link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/ionicons.min.css">
 
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
 
-	<link rel="stylesheet" href="css/aos.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+      <link rel="icon" href="Logo.jpg" type="image/png">
+    <style>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
 
-	<link rel="stylesheet" href="css/ionicons.min.css">
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(253, 245, 230,0.8);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
 
-	<link rel="stylesheet" href="css/bootstrap-datepicker.css">
-	<link rel="stylesheet" href="css/jquery.timepicker.css">
+.dropdown-content a {
+  color: black;
+    font-weight: 800;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {background-color: lightpink;}
 
+.dropdown:hover .dropdown-content {display: block;}
+</style>
+<style>
+    /* width */
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
 
-	<link rel="stylesheet" href="css/flaticon.css">
-	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="icon" href="Logo.jpg" type="image/png">
-	<style>
-		.dropdown {
-			position: relative;
-			display: inline-block;
-		}
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 3px grey; 
+      border-radius: 2px;
+    }
 
-		.dropdown-content {
-			display: none;
-			position: absolute;
-			background-color: rgba(253, 245, 230, 0.8);
-			min-width: 160px;
-			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-			z-index: 1;
-		}
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background:#FF557B; 
+      border-radius: 2px;
+    }
 
-		.dropdown-content a {
-			color: black;
-			font-weight: 800;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
-		}
-
-		.dropdown-content a:hover {
-			background-color: lightpink;
-		}
-
-		.dropdown:hover .dropdown-content {
-			display: block;
-		}
-	</style>
-	<style>
-		/* width */
-		::-webkit-scrollbar {
-			width: 5px;
-		}
-
-		/* Track */
-		::-webkit-scrollbar-track {
-			box-shadow: inset 0 0 3px grey;
-			border-radius: 2px;
-		}
-
-		/* Handle */
-		::-webkit-scrollbar-thumb {
-			background: #FF557B;
-			border-radius: 2px;
-		}
-
-		/* Handle on hover */
-		::-webkit-scrollbar-thumb:hover {
-			background: #0000CD;
-		}
-
-		::-webkit-scrollbar:hover {
-			width: 10px;
-		}
-	</style>
-</head>
-
-<body>
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #0000CD; 
+    }
+      ::-webkit-scrollbar:hover{
+          width: 10px;
+      }
+</style>
+  </head>
+  <body>
 
 	<div id="colorlib-page">
 		<a href="Gallery.html" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
@@ -98,19 +90,19 @@
 				<ul>
 					<li><a href="../index.html">Home</a></li>
 					<li class="colorlib-active"><a href="Gallery.html">Gallery</a></li>
-
-					<div class="dropdown">
-						<li><a>Messages</a></li>
-						<div class="dropdown-content">
-							<a href="../Patron's Message/Pmessage.html">Patron</a>
-							<a href="../president/President.html">President</a>
-							<a href="../VP/VP.html">Vice President</a>
-							<a href="../General Secretory/General Secretary.html">Hony. Secretary</a>
-							<a href="../Hon Secretory/Hon Secretory.html">Secretary</a>
-						</div>
-					</div>
-
-					<li><a href="../Office bearers/Office bearers.html">Office Bearers</a></li>
+                    
+                     <div class="dropdown">
+                    <li><a>Messages</a></li>
+                         <div class="dropdown-content">
+                                    <a href="../Patron's Message/Pmessage.html">Patron</a>
+                                    <a href="../president/President.html">President</a>
+                                    <a href="../VP/VP.html">Vice President</a>
+                                    <a href="../General Secretory/General Secretary.html">Hony. Secretary</a>
+                                    <a href="../Hon Secretory/Hon Secretory.html">Secretary</a>
+                                    </div>
+                    </div>
+                    
+                    <li><a href="../Office bearers/Office bearers.html">Office Bearers</a></li>
 					<li><a href="../Activities/Activities.html">Activities</a></li>
 					<li><a href="../Downloads/Downloads.html">Downloads</a></li>
 					<li><a href="../Contact Us/Contact Us.html">Contacts</a></li>
@@ -121,10 +113,8 @@
 				<h3>Follow Us Here!</h3>
 				<div class="d-flex justify-content-center">
 					<ul class="d-flex align-items-center">
-						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i
-									class="icon-facebook"></i></a></li>
-						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i
-									class="icon-twitter"></i></a></li>
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-facebook"></i></a></li>
+						<li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-twitter"></i></a></li>
 					</ul>
 				</div>
 			</div>
@@ -134,9 +124,7 @@
 				<div class="photograhy">
 					<div class="row no-gutters">
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20161025-WA0033.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20161025-WA0033.jpg);">
+							<a href="IMG-20161025-WA0033.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20161025-WA0033.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>1</h3>
@@ -145,9 +133,7 @@
 							</a>
 						</div>
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20161025-WA0034.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20161025-WA0034.jpg);">
+							<a href="IMG-20161025-WA0034.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20161025-WA0034.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>2</h3>
@@ -155,10 +141,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20161026-WA0005.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20161026-WA0005.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20161026-WA0005.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20161026-WA0005.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>3</h3>
@@ -166,10 +150,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20161026-WA0000.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20161026-WA0000.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20161026-WA0000.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20161026-WA0000.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>4</h3>
@@ -177,10 +159,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20161026-WA0004.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20161026-WA0004.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20161026-WA0004.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20161026-WA0004.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>5</h3>
@@ -188,10 +168,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG_20161025_135244.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG_20161025_135244.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG_20161025_135244.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG_20161025_135244.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>6</h3>
@@ -199,10 +177,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG_20161025_135303.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG_20161025_135303.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG_20161025_135303.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG_20161025_135303.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>7</h3>
@@ -210,10 +186,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20161025-WA0034.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20161025-WA0034.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20161025-WA0034.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20161025-WA0034.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>8</h3>
@@ -221,10 +195,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0071.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0071.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0071.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0071.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>9</h3>
@@ -233,9 +205,7 @@
 							</a>
 						</div>
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0072.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0072.jpg);">
+							<a href="IMG-20170711-WA0072.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0072.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>10</h3>
@@ -244,9 +214,7 @@
 							</a>
 						</div>
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0073.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0073.jpg);">
+							<a href="IMG-20170711-WA0073.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0073.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>11</h3>
@@ -255,9 +223,7 @@
 							</a>
 						</div>
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0074.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0074.jpg);">
+							<a href="IMG-20170711-WA0074.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0074.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>12</h3>
@@ -266,9 +232,7 @@
 							</a>
 						</div>
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0075.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0075.jpg);">
+							<a href="IMG-20170711-WA0075.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0075.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>13</h3>
@@ -276,10 +240,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0076.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0076.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0076.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0076.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>14</h3>
@@ -287,10 +249,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0077.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0077.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0077.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0077.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>15</h3>
@@ -298,10 +258,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0078.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0078.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0078.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0078.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>16</h3>
@@ -309,10 +267,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0079.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0079.jpg);">
+                         <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0079.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0079.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>17</h3>
@@ -320,10 +276,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0080.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0080.jpg);">
+                         <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0080.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0080.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>18</h3>
@@ -331,10 +285,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0081.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0081.jpg);">
+                         <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0081.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0081.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>19</h3>
@@ -342,10 +294,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0082.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0082.jpg);">
+                         <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0082.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0082.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>20</h3>
@@ -353,10 +303,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0083.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0083.jpg);">
+                         <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0083.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0083.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>21</h3>
@@ -364,10 +312,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0084.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0084.jpg);">
+                         <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0084.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0084.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>22</h3>
@@ -375,10 +321,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0085.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0085.jpg);">
+                         <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0085.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0085.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>23</h3>
@@ -386,10 +330,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0086.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0086.jpg);">
+                         <div class="col-md-4 ftco-animate">
+							<a href="IMG-20170711-WA0086.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0086.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>24</h3>
@@ -398,9 +340,7 @@
 							</a>
 						</div>
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0087.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0087.jpg);">
+							<a href="IMG-20170711-WA0087.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0087.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>25</h3>
@@ -409,9 +349,7 @@
 							</a>
 						</div>
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0088.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0088.jpg);">
+							<a href="IMG-20170711-WA0088.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0088.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>26</h3>
@@ -420,9 +358,7 @@
 							</a>
 						</div>
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0089.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0089.jpg);">
+							<a href="IMG-20170711-WA0089.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0089.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>27</h3>
@@ -431,9 +367,7 @@
 							</a>
 						</div>
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20170711-WA0090.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20170711-WA0090.jpg);">
+							<a href="IMG-20170711-WA0090.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20170711-WA0090.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>28</h3>
@@ -442,9 +376,7 @@
 							</a>
 						</div>
 						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20190811-WA0082.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0082.jpg);">
+							<a href="IMG-20190811-WA0082.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20190811-WA0082.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>29</h3>
@@ -452,10 +384,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20190912-WA0051.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190912-WA0051.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20190912-WA0051.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20190912-WA0051.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>30</h3>
@@ -463,10 +393,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20190811-WA0034.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0034.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20190811-WA0034.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20190811-WA0034.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>31</h3>
@@ -474,10 +402,8 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="IMG-20190811-WA0081.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
+                        <div class="col-md-4 ftco-animate">
+							<a href="IMG-20190811-WA0081.jpg" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(IMG-20190811-WA0081.jpg);">
 								<div class="overlay"></div>
 								<div class="text text-center">
 									<h3>32</h3>
@@ -485,2357 +411,30 @@
 								</div>
 							</a>
 						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0000.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0000.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0001.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0002.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0003.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0004.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0005.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0006.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0007.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0008.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
-						<div class="col-md-4 ftco-animate">
-							<a href="Gallery/img 0009.jpg"
-								class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-								style="background-image: url(IMG-20190811-WA0081.jpg);">
-								<div class="overlay"></div>
-								<div class="text text-center">
-									<h3>32</h3>
-									<span class="tag">Conference and Functions</span>
-								</div>
-							</a>
-						</div>
 					</div>
 				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0010.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0011.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0012.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0013.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0014.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0015.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0016.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0017.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0018.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0019.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0020.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0021.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0022.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0023.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0024.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0025.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0026.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0027.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0028.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0029.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0030.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0031.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0032.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0033.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0034.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0035.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0036.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0037.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0038.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0039.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0040.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0041.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0042.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0043.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0044.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0045.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0046.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0047.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0048.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0049.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0050.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0051.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0052.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0053.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0054.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0055.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0056.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0057.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0058.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0059.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0060.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0061.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0062.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0063.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0064.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0065.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0066.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0067.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0068.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0069.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0070.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0071.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0072.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0073.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0074.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0075.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0076.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0077.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0078.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0079.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0080.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0081.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0082.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0083.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0084.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0085.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0086.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0087.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0088.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0089.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0090.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0091.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0092.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0093.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0094.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0095.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0096.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0097.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0098.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 0099.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00100.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00101.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00102.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00103.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00104.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00105.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00106.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00107.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00108.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00109.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00110.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00111.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00112.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00113.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00114.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00115.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00116.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00117.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00118.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00119.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00120.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00121.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00122.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00123.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00124.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00125.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00126.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00127.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00128.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00129.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00130.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00131.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00132.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00133.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00134.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00135.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00136.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00137.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00138.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00139.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00140.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00141.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00142.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00143.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00144.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00145.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00146.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00147.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00148.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00149.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00150.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00151.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00152.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00153.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00154.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00155.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00156.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00157.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00158.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00159.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00160.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00161.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00162.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00163.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00164.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00165.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00166.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00167.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00168.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00169.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00170.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00171.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00172.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00173.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00174.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00175.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00176.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00177.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00178.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00179.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00180.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00181.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00182.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00183.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00184.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00185.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00186.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00187.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00188.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00189.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00190.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00191.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00192.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00193.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00194.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00195.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00196.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00197.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00198.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00199.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00200.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00201.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00202.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00203.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00204.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00205.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00206.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00207.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00208.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-4 ftco-animate">
-					<a href="Gallery/img 00209.jpg"
-						class="photography-entry img image-popup d-flex justify-content-center align-items-center"
-						style="background-image: url(IMG-20190811-WA0081.jpg);">
-						<div class="overlay"></div>
-						<div class="text text-center">
-							<h3>32</h3>
-							<span class="tag">Conference and Functions</span>
-						</div>
-					</a>
-				</div>
-
 			</section>
 		</div><!-- END COLORLIB-MAIN -->
 	</div><!-- END COLORLIB-PAGE -->
-	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-				stroke="#F96D00" /></svg></div>
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery-migrate-3.0.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.easing.1.3.js"></script>
-	<script src="js/jquery.waypoints.min.js"></script>
-	<script src="js/jquery.stellar.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/aos.js"></script>
-	<script src="js/jquery.animateNumber.min.js"></script>
-	<script src="js/bootstrap-datepicker.js"></script>
-	<script src="js/jquery.timepicker.min.js"></script>
-	<script src="js/scrollax.min.js"></script>
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-	<script src="js/google-map.js"></script>
-	<script src="js/main.js"></script>
-
-</body>
-
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
 </html>
