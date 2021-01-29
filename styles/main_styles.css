@@ -2154,3 +2154,17 @@ section
 {
 	color: #FFFFFF;
 }
+.arrow-mob-view{
+	color: rgba(0, 0, 0, 0.5);
+	float: right;
+	font-size: 1rem;
+	display: none;
+}
+@media only screen and (max-width: 1275px) {
+	.arrow-mob-view{
+		display: block !important;
+		top: -5rem !important;
+		margin: 10px 0px auto auto;
+		font-family: 'Balsamiq Sans', cursive;
+	}
+  }
