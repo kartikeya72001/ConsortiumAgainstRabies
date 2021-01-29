@@ -2167,4 +2167,8 @@ section
 		margin: 10px 0px auto auto;
 		font-family: 'Balsamiq Sans', cursive;
 	}
+	.move-right{
+		margin-left: 2.2rem !important;
+		right:-2rem !important;
+	}
   }
