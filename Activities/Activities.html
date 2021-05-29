@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,55 +17,64 @@
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="gallery-grid.css">
     <style>
-        h3{
+        h3 {
             color: black;
         }
-        p{
+
+        p {
             color: black;
         }
-        span{
+
+        span {
             display: block;
         }
     </style>
     <style>
-    /* width */
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
 
-    /* Track */
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 3px grey; 
-      border-radius: 2px;
-    }
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 3px grey;
+            border-radius: 2px;
+        }
 
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background:#FF557B; 
-      border-radius: 2px;
-    }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #FF557B;
+            border-radius: 2px;
+        }
 
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #0000CD; 
-    }
-      ::-webkit-scrollbar:hover{
-          width: 10px;
-      }
-</style>
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0000CD;
+        }
+
+        ::-webkit-scrollbar:hover {
+            width: 10px;
+        }
+    </style>
     <link rel="stylesheet" href="Activities.css">
 </head>
+
 <body style="overflow-x: hidden; color: black">
 
     <!--================Header Menu Area =================-->
-    <header class="header_area">	
+    <header class="header_area">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="../index.html"><img src="Logo.jpg" alt="" style="width: 2rem; height: 2rem; border-radius: 50%;"> CARCON</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand logo_h" href="../index.html"><img src="Logo.jpg" alt=""
+                            style="width: 2rem; height: 2rem; border-radius: 50%;"> CARCON</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -72,30 +82,44 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
                             <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Messages</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Messages</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="../Patron's Message/Pmessage.html">Patron</a></li> 
-                                    <li class="nav-item"><a class="nav-link" href="../president/President.html">President</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../VP/VP.html">Vice President</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../General Secretory/General Secretary.html">Hony. Secretary</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../Hon Secretory/Hon Secretory.html">Secratory</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Patron's Message/Pmessage.html">Patron</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../president/President.html">President</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../VP/VP.html">Vice President</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../General Secretory/General Secretary.html">Hony. Secretary</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Hon Secretory/Hon Secretory.html">Secratory</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="../Activities/Activities.html">Activities</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="../Gallery/Gallery.html">Gallery</a></li>     
+                            <li class="nav-item"><a class="nav-link" href="../Activities/Activities.html">Activities</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="../Gallery/Gallery.html">Gallery</a></li>
                             <li class="nav-item submenu dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CARCON</a>
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">CARCON</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="../Conference/Carcon2020/Carcon2020.html">CARCON-2020</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../Conference/CARCON2019/Carcon2019.html">CARCON-2019</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../Conference/Carcon2018/Carcon2018.html">CARCON-2018</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../Conference/Carcon2017/Carcon2017.html">CARCON-2017</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../Conference/Carcon%202014/Carcon2014.html">CARCON-2014</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Conference/Carcon2020/Carcon2020.html">CARCON-2020</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Conference/CARCON2019/Carcon2019.html">CARCON-2019</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Conference/Carcon2018/Carcon2018.html">CARCON-2018</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Conference/Carcon2017/Carcon2017.html">CARCON-2017</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Conference/Carcon%202014/Carcon2014.html">CARCON-2014</a></li>
                                 </ul>
-                            </li> 
-                            <li class="nav-item"><a class="nav-link" href="../Contact Us/Contact Us.html">Contact</a></li>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="../Contact Us/Contact Us.html">Contact</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -106,14 +130,16 @@
 
     <!--================Home Banner Area =================-->
     <section class="home_banner_area">
-        <div class="banner_inner d-flex align-items-center" style="background-image: url(Wallpapernew.jpg); background-size: cover;">
+        <div class="banner_inner d-flex align-items-center"
+            style="background-image: url(Wallpapernew.jpg); background-size: cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-6 col-xl-5 offset-xl-1">
                         <div class="banner_content">
-                            <h3>CONSORTIUM<br/> AGAINST RABIES</h3>
+                            <h3>CONSORTIUM<br /> AGAINST RABIES</h3>
                             <p>Let us strive to make India Rabies free !!</p>
-                            <a class="banner_btn" href="../RabiesAndYou.html">Rabies And You<i class="ti-arrow-right"></i></a>
+                            <a class="banner_btn" href="../RabiesAndYou.html">Rabies And You<i
+                                    class="ti-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -122,98 +148,220 @@
         </div>
     </section>
     <br>
-    <sectio>
-        <h1 class="abc">Activities</h1>
-        <h2 class="para">Rabies Prevention: Newer Dimensions</h2>
-            <div style="font-family: 'Poppins', sans-serif; font-size: 1.3rem;">
-                <p class="txt"><a href="https://us02web.zoom.us/webinar/register/WN_9j5yi3a-TwiXemsFd6ACCg" target="_blank">ZOOM MEET</a>
+    <div class="container gallery-container" style="background-color: antiquewhite; box-shadow: 
+    lightgray 4px 4px 8px,
+    gray -2px -2px 16px; border-radius: 1rem;">
 
-                    <br>
-                    Pl log into the zoom link.<br>
-                     20 mins left for session to begin. <br>
-                    After 500 participants zoom will not accept more. <br>
-                    <br><br>
-                    Then please log in via you tube link.
-                    <br><br>
-                    <a href="https://www.youtube.com/channel/UCwyLz3NBiJ0VFdbuhYsAZMA/videos">Youtube Video: Newer Dimensions</a>
-                    
-                    <br><br>
-                    Regards<br>
-                    Dr G P Kaushal <br>
-                    President<br>
-                    Dr Anurag Agarwal,<br>
-                    Hony Secretary General,<br>
-                    DR Amir Maroof<br>
-                    Secretary. <br>
-                    Consortium Against Rabies. <br>
-                    Dr RK Nabh<br>
-                    President<br>
-                    Dr Smita Mishra <br>
-                    Secretary IAP Delhi<br>
-                    Dr B B Wadhwa<br>
-                    President<br>
-                    DR Ajay Gambhir<br>
-                    Secretary DMA</p>
+        <h1>Rabies Prevention: Newer Dimensions</h1>
+
+        <div style="font-family: 'Poppins', sans-serif; font-size: 1.3rem;">
+            <p class="txt"><a href="https://us02web.zoom.us/webinar/register/WN_9j5yi3a-TwiXemsFd6ACCg"
+                    target="_blank">ZOOM MEET</a>
+
+                <br>
+                Pl log into the zoom link.<br>
+                20 mins left for session to begin. <br>
+                After 500 participants zoom will not accept more. <br>
+                <br><br>
+                Then please log in via you tube link.
+                <br><br>
+                <a href="https://www.youtube.com/channel/UCwyLz3NBiJ0VFdbuhYsAZMA/videos">Youtube Video: Newer
+                    Dimensions</a>
+
+                <br><br>
+                Regards<br>
+                Dr G P Kaushal <br>
+                President<br>
+                Dr Anurag Agarwal,<br>
+                Hony Secretary General,<br>
+                DR Amir Maroof<br>
+                Secretary. <br>
+                Consortium Against Rabies. <br>
+                Dr RK Nabh<br>
+                President<br>
+                Dr Smita Mishra <br>
+                Secretary IAP Delhi<br>
+                Dr B B Wadhwa<br>
+                President<br>
+                DR Ajay Gambhir<br>
+                Secretary DMA
+            </p>
+        </div>
+
+        <div class="tz-gallery">
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.37 PM.jpeg">
+                        <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.37 PM.jpeg" alt="Park">
+                    </a>
                 </div>
-                <div class="img">
-                    <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.37 PM.jpeg" class="image">                 
-                    <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.38 PM (1).jpeg" class="image">                 
-                    <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.38 PM (2).jpeg" class="image">                 
-                    <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.38 PM.jpeg" class="image">                 
-                    <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.39 PM (1).jpeg" class="image">                 
-                    <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.39 PM (2).jpeg" class="image">                 
-                    <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.39 PM.jpeg" class="image">                 
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.38 PM (1).jpeg">
+                        <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.38 PM (1).jpeg" alt="Bridge">
+                    </a>
                 </div>
-    <h2 class="para">National CME on Updates in Rabies - 16th November 2019 -<br>
-Dr RML Institute of Medical Sciences and Hospital, Lucknow</h2>
-    <p class="txt">For Medical Faculty, Medical Officers and Nursing Staff and other interested participants, was organized by Department of  Community Medicine, Dr RMLIMS, Lucknow, UP. Organizing Secy. Dr Manish Singh.</p>
-        <br>
-    <div class="pdf">
-        <iframe src="anurag_cme_16_nov_2019_rml_lucknow.pdf" width="50%" height="300px" class="pdf"></iframe>
-        <iframe src="dr_amir_cme_16_nov_2019_rml_lucknow.pdf" width="50%" height="300px" class="pdf"></iframe>
-        <iframe src="kaushal_dr__cme_16_nov_2019__rml_lucknow.pdf" width="50%" height="300px" class="pdf"></iframe>
+                <div class="col-sm-12 col-md-4">
+                    <a class="lightbox" href="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.38 PM (2).jpeg">
+                        <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.38 PM (2).jpeg" alt="Tunnel">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.38 PM.jpeg">
+                        <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.38 PM.jpeg" alt="Coast">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.39 PM (1).jpeg">
+                        <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.39 PM (1).jpeg" alt="Rails">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.39 PM (2).jpeg">
+                        <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.39 PM (2).jpeg" alt="Traffic">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.39 PM.jpeg">
+                        <img src="./NewerDimensions/WhatsApp Image 2020-09-24 at 8.23.39 PM.jpeg" alt="Rocks">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="vid"><iframe width="1000" height="615" src="https://www.youtube.com/embed/bqoqsMGchQ0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-    <div class="img">
-        <img src="69622209-2762041777193666-9108496968950218752-n.jpg" class="image">
-        <img src="69695681-2762194440511733-377479981246185472-o.jpg" class="image">
-        <img src="69762511-2762193817178462-1233258008885067776-o.jpg" class="image">
-        <img src="72140710-2762041227193721-3885093662090067968-n.jpg" class="image">
-        <img src="72219492-2762193610511816-908628893001318400-o.jpg" class="image">
-        <img src="74680624-2762040720527105-1771438877320413184-n.jpg" class="image">
-        <img src="75311660-2762194570511720-638012886400106496-o.jpg" class="image">
-        <img src="75317359-2762041393860371-4881445479700758528-n.jpg" class="image">
-        <img src="75429467-2762041657193678-3842196185867616256-n.jpg" class="image">
-        <img src="75446695-2762193787178465-6582622222521729024-o.jpg" class="image">
-        <img src="75485997-2762040657193778-6226735026147426304-n.jpg" class="image">
-        <img src="77018479-2762193510511826-2862790312047149056-o.jpg" class="image">
-        
-        
-        <h2 class="para">CME on Animal bite management to prevent Rabies - 25th October 2016</h2>
-    </div>
-    <p class="txt">For Medical Faculty, Medical Officers and Nursing Staff and other interested participants, to be organized by Department of  Community Medicine, SHK Mewat Medical College, Mewat, Haryana
-Organizing Secy. Prof. Dr. Pawan Goel MD.</p>
-        <br>
-    <h2 class="para">CARCON 2017 - 4th and 5th March 2015 - Integral Institute of Medical Sciences, Lucknow, Uttar Pradesh - First Announceent</h2>
-    <p class="txt">The 5th National Conference of Consortium Against Rabies was held on 4th and 5th March 2017 at Integral Institute of Medical Sciences, Lucknow, Uttar Pradesh.
-Log on to: <a href="http://carcon2017.com/" target="_blank" style="color: blue">www.carcon2017.com</a> for registration, abstract submission and other details.</p>
     <br>
-    <div class="pdf">
+    <!-- Second Part -->
+    <div class="container gallery-container" style="background-color: antiquewhite; box-shadow: 
+    lightgray 4px 4px 8px,
+    gray -2px -2px 16px; border-radius: 1rem;">
+
+        <h1>National CME on Updates in Rabies - 16th November 2019 -<br>
+            Dr RML Institute of Medical Sciences and Hospital, Lucknow</h1>
+        <div>
+            <p class="txt">For Medical Faculty, Medical Officers and Nursing Staff and other interested participants,
+                was
+                organized by Department of Community Medicine, Dr RMLIMS, Lucknow, UP. Organizing Secy. Dr Manish Singh.
+            </p>
+            <br>
+            <div class="pdf">
+                <iframe src="anurag_cme_16_nov_2019_rml_lucknow.pdf#zoom=FitW" width="50%" height="300px"
+                    class="pdf"></iframe>
+                <iframe src="dr_amir_cme_16_nov_2019_rml_lucknow.pdf" width="50%" height="300px" class="pdf"></iframe>
+                <iframe src="kaushal_dr__cme_16_nov_2019__rml_lucknow.pdf" width="50%" height="300px"
+                    class="pdf"></iframe>
+            </div>
+            <div class="vid"><iframe width="1000" height="615" src="https://www.youtube.com/embed/bqoqsMGchQ0"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></div>
+        </div>
+        <div class="tz-gallery">
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="69622209-2762041777193666-9108496968950218752-n.jpg">
+                        <img src="69622209-2762041777193666-9108496968950218752-n.jpg" alt="Park">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="69695681-2762194440511733-377479981246185472-o.jpg">
+                        <img src="69695681-2762194440511733-377479981246185472-o.jpg" alt="Bridge">
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <a class="lightbox" href="69762511-2762193817178462-1233258008885067776-o.jpg">
+                        <img src="69762511-2762193817178462-1233258008885067776-o.jpg" alt="Tunnel">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="72140710-2762041227193721-3885093662090067968-n.jpg">
+                        <img src="72140710-2762041227193721-3885093662090067968-n.jpg" alt="Coast">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="72219492-2762193610511816-908628893001318400-o.jpg">
+                        <img src="72219492-2762193610511816-908628893001318400-o.jpg" alt="Rails">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="74680624-2762040720527105-1771438877320413184-n.jpg">
+                        <img src="74680624-2762040720527105-1771438877320413184-n.jpg" alt="Traffic">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="75311660-2762194570511720-638012886400106496-o.jpg">
+                        <img src="75311660-2762194570511720-638012886400106496-o.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="75317359-2762041393860371-4881445479700758528-n.jpg">
+                        <img src="75317359-2762041393860371-4881445479700758528-n.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="75429467-2762041657193678-3842196185867616256-n.jpg">
+                        <img src="75429467-2762041657193678-3842196185867616256-n.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="75446695-2762193787178465-6582622222521729024-o.jpg">
+                        <img src="75446695-2762193787178465-6582622222521729024-o.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="75485997-2762040657193778-6226735026147426304-n.jpg">
+                        <img src="75485997-2762040657193778-6226735026147426304-n.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="77018479-2762193510511826-2862790312047149056-o.jpg">
+                        <img src="77018479-2762193510511826-2862790312047149056-o.jpg" alt="Rocks">
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
-    <h2 class="para">CARCON 2013 - New Delhi 20th April 2013 - A huge success</h2>
-    
-    <p class="txt">The department of Community Medicine, UCMS and GTB Hospital, University of Delhi,organized the 3rd National Conference of Consortium Against Rabies in association with Consortium Against Rabies on 20th April 2013. It was attended by more than 200 delegates from all over India and there were presentations by experienced researchers in the field of Rabies. The speakers were from prime institutes like National Centers for Disease Control, Public Health Foundation of India and other academic institutes like AIIMS, Rishikesh, UCMS, Delhi. The Director of Health Services, Govt of NCT of Delhi inaugurated the conference. The conference was a huge success.</p>
-    </sectio>
-<script src="js/jquery-2.2.4.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/jquery.form.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/theme.js"></script>
+    <br>
+    <div>
+        <h2 class="para">CME on Animal bite management to prevent Rabies - 25th October 2016</h2>
+        <p class="txt">For Medical Faculty, Medical Officers and Nursing Staff and other interested participants, to be
+            organized by Department of Community Medicine, SHK Mewat Medical College, Mewat, Haryana
+            Organizing Secy. Prof. Dr. Pawan Goel MD.</p>
+        <br>
+        <h2 class="para">CARCON 2017 - 4th and 5th March 2015 - Integral Institute of Medical Sciences, Lucknow, Uttar
+            Pradesh - First Announceent</h2>
+        <p class="txt">The 5th National Conference of Consortium Against Rabies was held on 4th and 5th March 2017 at
+            Integral Institute of Medical Sciences, Lucknow, Uttar Pradesh.
+            Log on to: <a href="http://carcon2017.com/" target="_blank" style="color: blue">www.carcon2017.com</a> for
+            registration, abstract submission and other details.</p>
+        <br>
+        <div class="pdf">
+        </div>
+        <h2 class="para">CARCON 2013 - New Delhi 20th April 2013 - A huge success</h2>
+
+        <p class="txt">The department of Community Medicine, UCMS and GTB Hospital, University of Delhi,organized the
+            3rd National Conference of Consortium Against Rabies in association with Consortium Against Rabies on 20th
+            April 2013. It was attended by more than 200 delegates from all over India and there were presentations by
+            experienced researchers in the field of Rabies. The speakers were from prime institutes like National
+            Centers for Disease Control, Public Health Foundation of India and other academic institutes like AIIMS,
+            Rishikesh, UCMS, Delhi. The Director of Health Services, Govt of NCT of Delhi inaugurated the conference.
+            The conference was a huge success.</p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/theme.js"></script>
 </body>
+
 </html>

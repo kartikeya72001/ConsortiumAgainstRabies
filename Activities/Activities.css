@@ -102,9 +102,12 @@ body{
     
 }
 .txt{
+    box-shadow: 
+    lightgray 4px 4px 8px,
+    gray -2px -2px 16px;
+    border-radius: 1rem;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 2px 2px 15px 2px;
     background-color: rgba(211,211,211,0.5);
     margin-left: 15%;
     margin-right:15%;
