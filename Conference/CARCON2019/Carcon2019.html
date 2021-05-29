@@ -1,5 +1,6 @@
-    <!doctype html>
+<!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,52 +16,60 @@
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="gallery-grid.css">
     <style>
-        h3{
+        h3 {
             color: black;
         }
-        p{
+
+        p {
             color: black;
         }
     </style>
     <style>
-    /* width */
-    ::-webkit-scrollbar {
-      width: 5px;
-    }
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
 
-    /* Track */
-    ::-webkit-scrollbar-track {
-      box-shadow: inset 0 0 3px grey; 
-      border-radius: 2px;
-    }
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 3px grey;
+            border-radius: 2px;
+        }
 
-    /* Handle */
-    ::-webkit-scrollbar-thumb {
-      background:#FF557B; 
-      border-radius: 2px;
-    }
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #FF557B;
+            border-radius: 2px;
+        }
 
-    /* Handle on hover */
-    ::-webkit-scrollbar-thumb:hover {
-      background: #0000CD; 
-    }
-      ::-webkit-scrollbar:hover{
-          width: 10px;
-      }
-</style>
-<link href="Carcon2019.css" rel="stylesheet">
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0000CD;
+        }
+
+        ::-webkit-scrollbar:hover {
+            width: 10px;
+        }
+    </style>
+    <link href="Carcon2019.css" rel="stylesheet">
 </head>
+
 <body>
 
     <!--================Header Menu Area =================-->
-    <header class="header_area">	
+    <header class="header_area">
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="../../index.html"><img src="Logo.jpg" alt="" style="width: 2rem; height: 2rem; border-radius: 50%;"> CARCON</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a class="navbar-brand logo_h" href="../../index.html"><img src="Logo.jpg" alt=""
+                            style="width: 2rem; height: 2rem; border-radius: 50%;"> CARCON</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -68,30 +77,45 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li> 
+                            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
                             <li class="nav-item submenu dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Messages</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Messages</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="../../Patron's Message/Pmessage.html">Patron</a></li> 
-                                    <li class="nav-item"><a class="nav-link" href="../../president/President.html">President</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../../VP/VP.html">Vice President</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../../General Secretory/General Secretary.html">Hony. Secretary</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../../Hon Secretory/Hon Secretory.html">Secretary</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../../Patron's Message/Pmessage.html">Patron</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../../president/President.html">President</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../VP/VP.html">Vice President</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../../General Secretory/General Secretary.html">Hony. Secretary</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../../Hon Secretory/Hon Secretory.html">Secretary</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a class="nav-link" href="../../Activities/Activities.html">Activities</a></li> 
-                            <li class="nav-item"><a class="nav-link" href="../../Gallery/Gallery.html">Gallery</a></li>     
+                            <li class="nav-item"><a class="nav-link"
+                                    href="../../Activities/Activities.html">Activities</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../Gallery/Gallery.html">Gallery</a></li>
                             <li class="nav-item submenu dropdown">
-                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CARCON</a>
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">CARCON</a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="../Carcon2020/Carcon2020.html">CARCON-2020</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../CARCON2019/Carcon2019.html">CARCON-2019</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../Carcon2018/Carcon2018.html">CARCON-2018</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../Carcon2017/Carcon2017.html">CARCON-2017</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="../Carcon%202014/Carcon2014.html">CARCON-2014</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Carcon2020/Carcon2020.html">CARCON-2020</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../CARCON2019/Carcon2019.html">CARCON-2019</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Carcon2018/Carcon2018.html">CARCON-2018</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Carcon2017/Carcon2017.html">CARCON-2017</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Carcon%202014/Carcon2014.html">CARCON-2014</a></li>
                                 </ul>
-                            </li> 
-                            <li class="nav-item"><a class="nav-link" href="../../Contact Us/Contact Us.html">Contact</a></li>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="../../Contact Us/Contact Us.html">Contact</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -102,14 +126,16 @@
 
     <!--================Home Banner Area =================-->
     <section class="home_banner_area">
-        <div class="banner_inner d-flex align-items-center" style="background-image: url(Wallpapernew.jpg); background-size: cover;">
+        <div class="banner_inner d-flex align-items-center"
+            style="background-image: url(Wallpapernew.jpg); background-size: cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 offset-lg-6 col-xl-5 offset-xl-1">
                         <div class="banner_content">
-                            <h3>CONSORTIUM<br/> AGAINST RABIES</h3>
+                            <h3>CONSORTIUM<br /> AGAINST RABIES</h3>
                             <p>Let us strive to make India Rabies free !!</p>
-                            <a class="banner_btn" href="../../RabiesAndYou.html">Rabies And You<i class="ti-arrow-right"></i></a>
+                            <a class="banner_btn" href="../../RabiesAndYou.html">Rabies And You<i
+                                    class="ti-arrow-right"></i></a>
                         </div>
                     </div>
 
@@ -127,9 +153,9 @@
                         </div>
                         <div class="service-content">
                             <h2 style="color: black;">CARCON 2019
-The 7th National Conference of Conference Against Rabies
-14-15 June 2019
-Dr RPGMC, Tanda, Kangra, Himachal Pradesh, India.</h2>
+                                The 7th National Conference of Conference Against Rabies
+                                14-15 June 2019
+                                Dr RPGMC, Tanda, Kangra, Himachal Pradesh, India.</h2>
                         </div>
                     </div>
                 </div>
@@ -145,14 +171,22 @@ Dr RPGMC, Tanda, Kangra, Himachal Pradesh, India.</h2>
                     <div class="single-service" style="background-color: antiquewhite; border-radius: 1rem;">
                         <div class="service-content">
                             <h2 style="color: black;"></h2>
-<p style="font-size: 1.2rem;">
-    <strong>CARCON 2019 was successfully conducted by Dr Sunil Raina and his organizing team at Dr RP Govt Medical College, Tanda, Himachal Pradesh. The conference was inaugurated by the State minister of Health and Family Welfare, Mr Vipin Singh Parmar.
+                            <p style="font-size: 1.2rem;">
+                                <strong>CARCON 2019 was successfully conducted by Dr Sunil Raina and his organizing team
+                                    at Dr RP Govt Medical College, Tanda, Himachal Pradesh. The conference was
+                                    inaugurated by the State minister of Health and Family Welfare, Mr Vipin Singh
+                                    Parmar.
 
-A one and a half day academic bonanza included plenary presentations by Padam Sri, Dr Omesh Bharti, President, WONCA South Asia, Dr Raman Kumar, and Panel discussions on One Health approach, and on Issues with newer WHO guidelines on Rabies prophylaxis. The paper presentations were divided in two sections, one for the Human component and another for the Animal component, thus moving ahead with an integrated approach in this domain.
+                                    A one and a half day academic bonanza included plenary presentations by Padam Sri,
+                                    Dr Omesh Bharti, President, WONCA South Asia, Dr Raman Kumar, and Panel discussions
+                                    on One Health approach, and on Issues with newer WHO guidelines on Rabies
+                                    prophylaxis. The paper presentations were divided in two sections, one for the Human
+                                    component and another for the Animal component, thus moving ahead with an integrated
+                                    approach in this domain.
 
-The next national conference CARCON 2020 will be hosted by IIPH Gandhinagar.
-</strong>
-</p>
+                                    The next national conference CARCON 2020 will be hosted by IIPH Gandhinagar.
+                                </strong>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -163,43 +197,124 @@ The next national conference CARCON 2020 will be hosted by IIPH Gandhinagar.
     <br><br>
     <div class="pdf">
         <iframe src="brochure_carcon_2019.pdf" width="70%" height="400px"></iframe>
-        <img src="reg-carcon_orig.png">    
+        <img src="reg-carcon_orig.png">
     </div>
     <br>
-    
-    <div class="images">
-        <img src="IMG_20190614_112729_1.jpg" class="img" >
-        <img src="IMG_20190614_112801.jpg" class="img" >
-        <img src="IMG_20190614_112805.jpg" class="img" >
-        <img src="IMG_20190614_112808.jpg" class="img" >
-        <img src="IMG_20190614_112837.jpg" class="img" >
-        <img src="IMG_20190614_112840_1.jpg" class="img" >
-        <img src="IMG_20190614_112912.jpg" class="img" >
-        <img src="IMG_20190614_112914_1.jpg" class="img" >
-        <img src="IMG_20190614_112917.jpg" class="img" >
-        <img src="IMG_20190614_112924.jpg" class="img" >
-        <img src="IMG_20190614_112927.jpg" class="img" >
-        <img src="IMG_20190614_112941.jpg" class="img" >
-        <img src="IMG_20190614_112953.jpg" class="img" >
-        <img src="IMG_20190614_112954.jpg" class="img" >
-        <img src="IMG_20190614_112958_1.jpg" class="img" >
-        <img src="IMG_20190614_113045.jpg" class="img" >
-        <img src="IMG_20190614_113047.jpg" class="img" >
-</div>
+    <div class="container gallery-container" style="background-color: antiquewhite; box-shadow: 
+    lightgray 4px 4px 8px,
+    gray -2px -2px 16px; border-radius: 1rem;">
+
+        <h1>Rabies Prevention: Newer Dimensions</h1>
+        <div class="tz-gallery">
+
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112729_1.jpg">
+                        <img src="IMG_20190614_112729_1.jpg" alt="Park">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112801.jpg">
+                        <img src="IMG_20190614_112801.jpg" alt="Bridge">
+                    </a>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112805.jpg">
+                        <img src="IMG_20190614_112805.jpg" alt="Tunnel">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112808.jpg">
+                        <img src="IMG_20190614_112808.jpg" alt="Coast">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112837.jpg">
+                        <img src="IMG_20190614_112837.jpg" alt="Rails">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112840_1.jpg">
+                        <img src="IMG_20190614_112840_1.jpg" alt="Traffic">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112912.jpg">
+                        <img src="IMG_20190614_112912.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <!--  -->
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112914_1.jpg">
+                        <img src="IMG_20190614_112914_1.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112917.jpg">
+                        <img src="IMG_20190614_112917.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112924.jpg">
+                        <img src="IMG_20190614_112924.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112927.jpg">
+                        <img src="IMG_20190614_112927.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112941.jpg">
+                        <img src="IMG_20190614_112941.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112953.jpg">
+                        <img src="IMG_20190614_112953.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112954.jpg">
+                        <img src="IMG_20190614_112954.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_112958_1.jpg">
+                        <img src="IMG_20190614_112958_1.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_113045.jpg">
+                        <img src="IMG_20190614_113045.jpg" alt="Rocks">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <a class="lightbox" href="IMG_20190614_113047.jpg">
+                        <img src="IMG_20190614_113047.jpg" alt="Rocks">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <br>
-    
-    
-    
-<script src="js/jquery-2.2.4.min.js"></script>
-<script src="js/popper.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-<script src="js/jquery.ajaxchimp.min.js"></script>
-<script src="js/waypoints.min.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/jquery.form.js"></script>
-<script src="js/jquery.validate.min.js"></script>
-<script src="js/mail-script.js"></script>
-<script src="js/theme.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/theme.js"></script>
 </body>
+
 </html>
