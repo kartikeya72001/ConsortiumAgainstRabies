@@ -1,270 +1,246 @@
-<!DOCTYPE html>
-<html>
-    
-    
-    
-    
-    
-    
+<!doctype html>
+<html lang="en">
+
 <head>
-    <link rel="shortcut icon" href="Logo.jpg">
-<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
-<meta name="viewport" content="width=device-width, initial-scale=0.3">
-<style>
-body {
-  font-size: 28px;
-}
-
-    
-    
-.navbar {
-    box-shadow: 2px 2px 2px 2px;
-    overflow: hidden;
-    background-color: #333;
-    list-style-type: none;
-    overflow: hidden;
-    top: 0;
-    z-index: 9999;
-}
-
-.navbar a {
- 
-    margin-left: 28px;
-    float: left;
-    font-size: 26px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    padding-bottom:0.5%;
-    text-decoration: none;
-}
-
-.dropdown {
-  float: left;
-    background-color: #333;
-    padding-right: 0.5%;
-    padding-bottom: 0.5%;
-    overflow: hidden;
-}
-
-.dropdown .dropbtn {
-  font-size: 27px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-    padding-right: 0.2%;
-    padding-bottom: 0px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #000;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #333;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  float: none;
-    color:black;
-    background-color: #333;
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-content a:hover {
-  background-color: #555;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-} 
-    
-    
-    
-    
-.dropdown1 {
-  float: left;
-    background-color: darkgreen;
-    padding-right: 0.5%;
-    padding-bottom: 0.5%;
-    overflow: hidden;
-}
-
-.dropdown1 .dropbtn {
-  font-size: 27px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-    padding-right: 0.2%;
-    padding-bottom: 0px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-.dropdown1:hover .dropdown-content {
-  display: block;
-} 
-    
-    
-    
-
-
-
-@media screen and (max-width:600px) {
-  .column1 {
-    width: 100%;
-  }
-}
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-@media screen and (max-width:600px) {
-  .column {
-    width: 100%;
-  }
-}
-</style>
-    <link href="Carcon2018.css" rel="stylesheet">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="Logo.jpg" type="image/png">
     <title>Carcon 2018</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="vendors/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/animate-css/animate.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    <link rel="stylesheet" href="gallery-grid.css">
+    <style>
+        h3 {
+            color: black;
+        }
+
+        p {
+            color: black;
+        }
+    </style>
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 3px grey;
+            border-radius: 2px;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #FF557B;
+            border-radius: 2px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0000CD;
+        }
+
+        ::-webkit-scrollbar:hover {
+            width: 10px;
+        }
+    </style>
+    <link href="Carcon2019.css" rel="stylesheet">
 </head>
-    
-    
-    
-    
-    
+
 <body>
 
-<div class="header">
-  <a class="heading" href="../../index.html">Consortium Against Rabies</a>
-    <br>
-    <p class="moto">Let us strive to make India Rabies free</p>
-    <br>
-    <img class="Logo" src="Logo.jpg" width="128" height="128">
-</div>
-    
+    <!--================Header Menu Area =================-->
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <a class="navbar-brand logo_h" href="../../index.html"><img src="Logo.jpg" alt=""
+                            style="width: 2rem; height: 2rem; border-radius: 50%;"> CARCON</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">Messages</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../../Patron's Message/Pmessage.html">Patron</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../../president/President.html">President</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="../../VP/VP.html">Vice President</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../../General Secretory/General Secretary.html">Hony. Secretary</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../../Hon Secretory/Hon Secretory.html">Secretary</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link"
+                                    href="../../Activities/Activities.html">Activities</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../../Gallery/Gallery.html">Gallery</a></li>
+                            <li class="nav-item submenu dropdown">
+                                <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button"
+                                    aria-haspopup="true" aria-expanded="false">CARCON</a>
+                                <ul class="dropdown-menu">
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Carcon2020/Carcon2020.html">CARCON-2020</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../CARCON2019/Carcon2019.html">CARCON-2019</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Carcon2018/Carcon2018.html">CARCON-2018</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Carcon2017/Carcon2017.html">CARCON-2017</a></li>
+                                    <li class="nav-item"><a class="nav-link"
+                                            href="../Carcon%202014/Carcon2014.html">CARCON-2014</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="../../Contact Us/Contact Us.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--================Header Menu Area =================-->
 
-    
-<div class="navbar" >
-    <a href="../../index.html" class="home">Home</a>
-        
-        
-    <div class="dropdown">
-    <button class="dropbtn">Messages 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-        <a href="../../Patron's Message/Pmessage.html">Patron's Message</a>
-      <a href="../../president/President.html">President's Message</a>
-      <a href="../../VP/VP.html">Vice President's Message</a>
-        <a href="../../General Secretory/General Secretary.html">Hony Secretary General's Message</a>
-      <a href="../../Hon Secretory/Hon Secretory.html">Secretary's Message</a>
-    </div>
-  </div>
-        
-        
-        <a href="../../Office bearers/Office bearers.html">Office Bearers</a>
-        <a href="../../Downloads/Downloads.html">Downloads</a>
-        <a href="../../Activities/Activities.html">Activities</a>
-        <a href="../../Gallery/Gallery.html">Gallery</a>
-        <a href="../../Life Members/LifeM.html">Life Members</a>
-        <div class="dropdown1">
-            <button class="dropbtn">Conference
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="../../Conference/Carcon2020/Carcon2020.html">CARCON 2020</a>
-            <a href="../../Conference/CARCON2019/Carcon2019.html">CARCON 2019</a>
-            <a href="../../Conference/Carcon2018/Carcon2018.html">CARCON 2018</a>
-            <a href="../../Conference/Carcon2017/Carcon2017.html">CARCON 2017</a>
-            <a href="../../Conference/Carcon 2014/Carcon2014.html">CARCON 2014</a>
+    <!--================Home Banner Area =================-->
+    <section class="home_banner_area">
+        <div class="banner_inner d-flex align-items-center"
+            style="background-image: url(Wallpapernew.webp); background-size: cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-6 col-xl-5 offset-xl-1">
+                        <div class="banner_content">
+                            <h3>CONSORTIUM<br /> AGAINST RABIES</h3>
+                            <p>Let us strive to make India Rabies free !!</p>
+                            <a class="banner_btn" href="../../RabiesAndYou.html">Rabies And You<i
+                                    class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
-    <a href="../../Contact Us/Contact Us.html">Contact Us</a>  
-</div>
-    
-    
+    </section>
     <br>
-<marquee bgcolor="#999" loop="-1"
+    <section class="service-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-lg-8">
+                    <div class="single-service" style="background-color: antiquewhite; border-radius: 1rem;">
+                        <div class="service-icon">
+                        </div>
+                        <div class="service-content">
+                            <h2 style="color: black;">VI National Conference of Consortium Against Rabies<br>
+                                CARCON 2018  on 23rd Feb 2018
+                                at AIIMS, Patna, Bihar</h2>
+                        </div>
+                    </div>
+                </div>
 
-scrollamount="12" width="100%"
-         onmouseover="this.stop();"
-        onmouseout="this.start();"> 
-<a href="../../Announcement/Announcement.html" style="color: blue">Announcement of CARCON-2020 </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../Updated guidelines/UpdatedG.html" style="color: blue">Updated Guidelines for Animal Bite Management 2020</a>
-</marquee>
-    
-    <div class="RAY">
-            <a href="../../RabiesAndYou.html" style="color:black">Rabies And You</a></div>
-    
-        <h1 class="abc">VI National Conference of Consortium Against Rabies<br>
-CARCON 2018  on 23rd Feb 2018<br>
-at AIIMS, Patna, Bihar</h1>
-    <div class="para">
-        <strong>
-    <p>The sixth national conference of Consortium Against Rabies was hosted by the Department of Community Medicine, AIIMS, Patna.
-Date: 23rd February 2018</p>
-</strong></div>
-    <div class="pdf">
-         <iframe src="carcon_2018_brochure.pdf" width="50%" height="300px"></iframe>
-    <iframe src="registration__form_-_carcon__2018.pdf" width="50%" height="300px"></iframe>
-        <h3>Contact Us</h3>
-        <p>Email:<br>
-            consortiumagainstrabies@gmail.com<br>
-            carcon2018@gmail.com<br>
-            Facebook: Consortium Against Rabies</p>
-    </div>
-    
-    <div class="images">
-        <img src="IMG_20180223_120811.jpg" class="img" >
-        <img src="IMG_20180223_123847.jpg" class="img" >
-        <img src="IMG_20180223_120820.jpg" class="img" >
-        <img src="IMG_20180223_123323.jpg" class="img" >
-        <img src="IMG_20180223_123740.jpg" class="img" >
-        <img src="IMG_20180223_125548.jpg" class="img" >
-        <img src="IMG_20180223_125557.jpg" class="img" >
-        <img src="IMG_20180223_130159.jpg" class="img" >
-        <img src="IMG_20180223_130239.jpg" class="img" >
-        <img src="IMG_20180223_130328.jpg" class="img" >
-        <img src="IMG_20180223_130547.jpg" class="img" >
-        <img src="IMG_20180223_130617.jpg" class="img" >
-        <img src="IMG_20180223_130743.jpg" class="img" >
-        <img src="IMG_20180223_133628.jpg" class="img" >
-        <img src="IMG_20180223_133640.jpg" class="img" >
-        <img src="IMG_20180223_135511.jpg" class="img" >
-        <img src="IMG_20180223_135600.jpg" class="img" >
-        <img src="IMG_20180223_135615.jpg" class="img" >
-        <img src="IMG_20180223_135621.jpg" class="img" >
-        <img src="IMG_20180223_141244.jpg" class="img" >
-        <img src="IMG_20180223_141305.jpg" class="img" >
-        <img src="IMG_20180223_160957.jpg" class="img" >
-        <img src="IMG_20180223_161007.jpg" class="img" >
-</div>
-   
+            </div>
+        </div>
+    </section>
     <br>
-    
-<footer class="footer">
-  <p>Posted by: Kartikeya Agarwal<br>
-  Contact information: <a href="mailto:consortiumagainstrabies@gmail.com">consortiumagainstrabies@gmail.com</a>.</p>
-    <p class="disclamer">Disclaimer: The data contained in this website is intended for general reference only and is meant for viewers in India only. It may refer to pharmaceutical products, diagnostic techniques, therapeutics or indications not yet registered or approved in a given country and it should be noted that, over time, currency and completeness of the data may change. For updated information, please contact the Company. This data should not be used to diagnose, treat, cure or prevent any disease without the professional advice of a Registered Medical Practitioner, and does not replace medical advice or a thorough medical examination. Registered Medical Practitioners should use their independent professional judgement in checking the symptoms, diagnosing & suggesting the appropriate line of treatment for patients.</p>
-</footer>
+    <section class="service-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-lg-8">
+                    <div class="single-service" style="background-color: antiquewhite; border-radius: 1rem;">
+                        <div class="service-content">
+                            <h2 style="color: black;"></h2>
+                            <p style="font-size: 1.2rem;">
+                                <strong>
+                                    The sixth national conference of Consortium Against Rabies was hosted by the Department of Community Medicine, AIIMS, Patna. Date: 23rd February 2018
+                                </strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <section class="service-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-lg-8">
+                    <div class="single-service" style="background-color: antiquewhite; border-radius: 1rem;">
+                        <div class="service-content">
+                            <a href="https://drive.google.com/file/d/1ZBA3qnUJHKevkUwii5QvZ1f1VwbhJLhm/view?usp=sharing"><img class="pdf" src="2018Brochure.jpg" width="100%" height="400px" style="border:none;border-radius: 8px;"></a>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="service-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-lg-8">
+                    <div class="single-service" style="background-color: antiquewhite; border-radius: 1rem;">
+                        <div class="service-content">
+                            <a href="https://drive.google.com/file/d/1griw4wTcXYjejWtyacyHsz5GIVgdC5PY/view?usp=sharing"><img class="pdf" src="Registraion2018.jpg" width="100%" height="400px" style="border:none;border-radius: 8px;"></a>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <div class="container gallery-container" style="background-color: antiquewhite; box-shadow: 
+    lightgray 4px 4px 8px,
+    gray -2px -2px 16px; border-radius: 1rem;">
+        <div class="tz-gallery">
+
+            <div class="row" id="imgSpace">
+                
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+    <script src="generateImages.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.tz-gallery');
+    </script>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+    <script src="js/theme.js"></script>
 </body>
+
 </html>
