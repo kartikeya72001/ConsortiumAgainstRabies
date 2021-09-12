@@ -251,11 +251,10 @@ for(var i=0;i<imagePath.length;i++){
                     <a href="${imagePath[i][0]}" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(${imagePath[i][0]});">
                         <div class="overlay"></div>
                         <div class="text text-center">
-                            <h3>${i}</h3>
+                            <h3>${i+1}</h3>
                             <span class="tag">${imagePath[i][1]}</span>
                         </div>
                     </a>
                 </div>`;
-    console.log(obj);
     document.getElementById('imgSpace').innerHTML += obj;
 }
