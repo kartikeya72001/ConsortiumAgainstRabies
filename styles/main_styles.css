@@ -2154,14 +2154,26 @@ section
 {
 	color: #FFFFFF;
 }
-.arrow-mob-view{
+.arrow-mob-view-right{
 	color: rgba(0, 0, 0, 0.5);
 	float: right;
 	font-size: 1rem;
 	display: none;
 }
+.arrow-mob-view-left{
+	color: rgba(0, 0, 0, 0.5);
+	float: left;
+	font-size: 1rem;
+	display: none;
+}
 @media only screen and (max-width: 1275px) {
-	.arrow-mob-view{
+	.arrow-mob-view-right{
+		display: block !important;
+		top: -5rem !important;
+		margin: 10px 0px auto auto;
+		font-family: 'Balsamiq Sans', cursive;
+	}
+	.arrow-mob-view-left{
 		display: block !important;
 		top: -5rem !important;
 		margin: 10px 0px auto auto;
