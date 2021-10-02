@@ -1,183 +1,205 @@
 html {
     overflow-x: hidden;
 }
-.header
-{
-    background-image:url("Wallpaper.jpg");
-    background-size:cover;
+
+.header {
+    background-image: url("Wallpaper.jpg");
+    background-size: cover;
     padding: 20px;
     align-content: center;
     text-align: center;
 }
-.list{
+
+.list {
     font-size: 23px;
 }
-body{
+
+.home {
+    margin-left: 0.5%;
 }
-.home{
-    margin-left:0.5%;
-}
-.active{
+
+.active {
     background-color: darkgreen;
 }
-.Logo{
+
+.Logo {
     background-color: #F2AC29;
-    background-image: linear-gradient(#F2AC29,#F2C029);
+    background-image: linear-gradient(#F2AC29, #F2C029);
     box-shadow: 2px 2px 2px 2px;
     padding: 0px;
     margin-bottom: 5px;
     border: none;
     border-color: black;
-    padding:5px;
+    padding: 5px;
     border-radius: 15px;
 }
-.moto{
+
+.moto {
     margin-right: 30%;
     margin-left: 30%;
     box-shadow: 2px 2px 2px 2px;
     background-color: #F2AC29;
-    background-image: linear-gradient(#F2AC29,#F2C029);
-    font-weight:700;
-    color:black;
+    background-image: linear-gradient(#F2AC29, #F2C029);
+    font-weight: 700;
+    color: black;
     padding: 0px;
     font-size: 35px;
 }
-.heading{
+
+.heading {
     font-size: 78px;
-    color:black;
+    color: black;
     font-weight: 800;
     text-decoration: none;
     font-family: 'Rokkitt', serif;
     padding: 6px;
     border-radius: 5px;
 }
-.heading:hover{
-    color:chartreuse;
+
+.heading:hover {
+    color: chartreuse;
 }
-.heading:active{
-    color:green;
+
+.heading:active {
+    color: green;
 }
-.Pmessage{
-    color:black;
+
+.Pmessage {
+    color: black;
     font-size: 50px;
     background-color: #777;
 }
-.footer{
-    font-size:12px;
+
+.footer {
+    font-size: 12px;
     background-color: #666;
     text-align: center;
     position: absolute;
 }
-.abc{
+
+.abc {
     box-shadow: 2px 2px 2px 2px;
     text-align: center;
-    background-color: #777;;
+    background-color: #777;
+    ;
 }
-.para{
+
+.para {
     height: auto;
     width: 50%;
     text-align: center;
     border-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    background-color: rgba(250,220,0,0.7);
+    background-color: rgba(250, 220, 0, 0.7);
     margin-left: 25%;
     margin-right: 10%;
 }
+
 @media only screen and (max-width: 600px) {
-    .para{
+    .para {
         height: auto;
         width: auto;
         text-align: center;
         border-radius: 8px;
         box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-        background-color: rgba(250,220,0,0.7);
+        background-color: rgba(250, 220, 0, 0.7);
         margin-left: 5%;
         margin-right: 10%;
     }
-    .txt{
+    .txt {
         height: auto;
         width: 150%;
         box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
         border-radius: 1rem;
         text-align: center;
         border-radius: 8px;
-        background-color: rgba(211,211,211,0.5);
+        background-color: rgba(211, 211, 211, 0.5);
         /* margin-left: 5%;
         margin-right:5%; */
     }
-    .vidObj{
+    .vidObj {
+        margin: 0;
         width: fit-content;
         height: auto;
     }
+    .adjust-top {
+        margin-top: -10rem;
+    }
+    .adjust-bottom {
+        margin-bottom: -12rem;
+    }
 }
-.pdf{
+
+.pdf {
     text-align: center;
 }
-.disclamer{
+
+.disclamer {
     font-size: 8px;
-    color:#333;
+    color: #333;
 }
-.links{
+
+.links {
     text-decoration: none;
-    
 }
-.images{
+
+.images {
     text-align: center;
-    background-color: rgba(211,211,211,0.7);
-    margin-right:6%;
-    padding-top:5%;
-    padding-bottom:5%;
-    margin-left:6%;
-    
+    background-color: rgba(211, 211, 211, 0.7);
+    margin-right: 6%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 6%;
 }
-.txt{
+
+.txt {
     height: auto;
     width: 60%;
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     border-radius: 1rem;
     text-align: center;
     border-radius: 8px;
-    background-color: rgba(211,211,211,0.5);
+    background-color: rgba(211, 211, 211, 0.5);
     margin-left: 20%;
-    margin-right:15%;
+    margin-right: 15%;
 }
-.vid{
+
+.vid {
     text-align: center;
 }
-.vidObj{
+
+.vidObj {
     width: 100%;
     height: 600px;
 }
-.image{
-    width:400px;
-    height:300px;
+
+.image {
+    width: 400px;
+    height: 300px;
     border-radius: 10px;
 }
-.img{
+
+.img {
     text-align: center;
 }
-.image:hover{
+
+.image:hover {
     transition: transform .5s;
     transform: scale(1.5);
-    border:solid;
-    padding:0;
+    border: solid;
+    padding: 0;
     border-radius: 5%;
 }
-.RAY{
-    background-image: linear-gradient(dodgerblue,deepskyblue);
+
+.RAY {
+    background-image: linear-gradient(dodgerblue, deepskyblue);
     margin-left: 35%;
-    margin-right:35%;
+    margin-right: 35%;
     border-radius: 12px;
-    box-shadow: 4px 4px 4px 4px rgba(0,0,0,0.2);
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
     font-size: 40px;
     text-align: center;
     text-decoration: none;
     color: aliceblue;
     font-weight: 600;
 }
-
-
-
-
-
-
