@@ -95,7 +95,7 @@ html {
     margin-right: 10%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .para {
         height: auto;
         width: auto;
@@ -106,16 +106,18 @@ html {
         margin-left: 5%;
         margin-right: 10%;
     }
+    .correction{
+        margin-left: -2rem;
+    }
     .txt {
+        margin-top: 10rem;
         height: auto;
-        width: 150%;
+        width: 15rem;
         box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
         border-radius: 1rem;
         text-align: center;
         border-radius: 8px;
         background-color: rgba(211, 211, 211, 0.5);
-        /* margin-left: 5%;
-        margin-right:5%; */
     }
     .vidObj {
         margin: 0;
@@ -154,13 +156,13 @@ html {
 
 .txt {
     height: auto;
-    width: 60%;
+    /* width: 60%; */
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
     border-radius: 1rem;
     text-align: center;
     border-radius: 8px;
     background-color: rgba(211, 211, 211, 0.5);
-    margin-left: 20%;
+    margin-left: 15%;
     margin-right: 15%;
 }
 
