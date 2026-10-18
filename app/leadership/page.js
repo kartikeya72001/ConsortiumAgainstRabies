@@ -1,15 +1,25 @@
 import Link from 'next/link';
 import { Award, UserCheck, ShieldCheck, HeartPulse, FileText, ArrowRight } from 'lucide-react';
-import officeBearers from '@/data/office_bearers.json';
+import { getLeadership } from '@/lib/db';
 import LeadershipMessages from '@/components/LeadershipMessages';
+
+export const dynamic = 'force-dynamic';
 
 export const metadata = {
   title: 'Executive Leadership & Messages | Consortium Against Rabies',
   description: 'Read official addresses from the President, Founder Patron, and Honorary Secretaries guiding the Consortium Against Rabies across India.',
 };
 
-export default function LeadershipPage() {
-  const { messages, currentExecutive, pastPresidents, pastTreasurers, pastVicePresidents } = officeBearers;
+export default async function LeadershipPage() {
+  const officeBearers = await getLeadership();
+  const { 
+    messages = [], 
+    currentExecutive = [], 
+    pastPresidents = [], 
+    pastTreasurers = [], 
+    pastVicePresidents = [],
+    pastMembers = []
+  } = officeBearers;
 
   return (
     <div className="section" style={{ background: '#F8FAFC', paddingTop: '3.5rem', paddingBottom: '5rem' }}>
@@ -47,7 +57,7 @@ export default function LeadershipPage() {
           <div className="grid-4">
             {currentExecutive.map((person, idx) => (
               <div 
-                key={idx} 
+                key={person.id || idx} 
                 className="card" 
                 style={{ 
                   textAlign: 'center', 
@@ -87,8 +97,7 @@ export default function LeadershipPage() {
           </div>
         </div>
 
-        {/* Honor Roll: Past Leadership */}
-        <div className="card" style={{ padding: '3rem', background: '#FFFFFF', border: '1px solid var(--border-subtle)', marginBottom: '3.5rem' }}>
+        <div className="card responsive-card" style={{ background: '#FFFFFF', border: '1px solid var(--border-subtle)', marginBottom: '3.5rem' }}>
           <div style={{ marginBottom: '2rem' }}>
             <span className="badge badge-blue" style={{ marginBottom: '0.4rem', display: 'inline-block' }}>
               Legacy & Service
@@ -144,6 +153,22 @@ export default function LeadershipPage() {
               </ul>
             </div>
           </div>
+
+          {pastMembers && pastMembers.length > 0 && (
+            <div style={{ marginTop: '2rem', background: '#F8FAFC', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid #E2E8F0' }}>
+              <h4 style={{ color: 'var(--primary-dark)', borderBottom: '2px solid #D97706', paddingBottom: '0.65rem', marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 700 }}>
+                Past Executive Council Members
+              </h4>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '0.75rem' }}>
+                {pastMembers.map((entry, i) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', fontSize: '0.95rem' }}>
+                    <ShieldCheck size={16} color="#D97706" style={{ flexShrink: 0 }} />
+                    <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>{typeof entry === 'object' ? `${entry.name} (${entry.role})` : entry}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Action Callout */}

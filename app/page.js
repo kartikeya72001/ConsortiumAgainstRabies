@@ -76,7 +76,7 @@ export default function HomePage() {
                 <div className="emergency-strip">
                   <div className="emergency-title">
                     <AlertTriangle size={18} />
-                    <span>Animal Bite Emergency Protocol</span>
+                    <span>Animal Bite Protocol</span>
                   </div>
                   <p className="emergency-desc">
                     <strong>Rule #1:</strong> Immediately wash all bite wounds with running water and soap for 15 minutes. Never apply lime, chili, or traditional irritants.
@@ -182,8 +182,8 @@ export default function HomePage() {
       {/* ================= PATRON MESSAGE HIGHLIGHT ================= */}
       <section className="section">
         <div className="container">
-          <div className="card" style={{ padding: '3rem', background: 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)', border: '1px solid #CBD5E1' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '2.5rem', alignItems: 'center' }}>
+          <div className="card responsive-card" style={{ background: 'linear-gradient(135deg, #FFFFFF 0%, #F8FAFC 100%)', border: '1px solid #CBD5E1' }}>
+            <div className="responsive-two-col">
               <img 
                 src="/Patron.jpg" 
                 alt="Dr. A.T. Kannan" 
@@ -214,7 +214,7 @@ export default function HomePage() {
       {/* ================= LATEST CONFERENCE ================= */}
       <section className="section section-dark">
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '3.5rem', alignItems: 'center' }}>
+          <div className="responsive-header-grid">
             <div>
               <span className="badge badge-teal" style={{ marginBottom: '0.75rem', color: '#042F2E', background: '#99F6E4' }}>
                 Featured Event

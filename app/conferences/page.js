@@ -25,14 +25,13 @@ export default function ConferencesPage() {
           {conferences.map((conf, index) => (
             <div 
               key={conf.year} 
-              className="card" 
+              className="card responsive-card" 
               style={{ 
-                padding: '2rem', 
                 borderLeft: index === 0 ? '6px solid var(--accent-teal)' : '1px solid var(--border-subtle)',
                 background: '#FFFFFF'
               }}
             >
-              <div style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: '2rem', alignItems: 'center' }}>
+              <div className="responsive-conf-grid">
                 {/* Conference Banner / Photo */}
                 <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', background: '#F1F5F9', maxHeight: 220, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <img 

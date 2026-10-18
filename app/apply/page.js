@@ -140,7 +140,7 @@ export default function ApplyPage() {
             </div>
           </div>
         ) : (
-          <div className="card" style={{ padding: '2.5rem', background: '#FFFFFF' }}>
+          <div className="card responsive-card" style={{ background: '#FFFFFF' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', paddingBottom: '1rem', borderBottom: '1px solid var(--border-subtle)', flexWrap: 'wrap', gap: '1rem' }}>
               <h3 style={{ fontSize: '1.3rem', color: 'var(--primary-dark)' }}>Online Application Form</h3>
               <a 

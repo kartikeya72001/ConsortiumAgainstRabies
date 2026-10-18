@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { 
@@ -24,8 +25,25 @@ import {
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const dropdownRef = useRef(null);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Prevent background scroll when mobile drawer is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -64,12 +82,13 @@ export default function Navbar() {
         <div className="header-container top-bar-content">
           <div className="top-bar-tag">
             <span className="top-bar-pulse"></span>
-            <span>Consortium Against Rabies (India) • Committed to Zero Human Rabies Deaths</span>
+            <span className="top-bar-text-full">Consortium Against Rabies (India) • Committed to Zero Human Rabies Deaths</span>
+            <span className="top-bar-text-mobile">CAR India • Zero Human Rabies Deaths</span>
           </div>
-          <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
-            <span style={{ color: '#94A3B8' }}>Animal Bite Emergency?</span>
+          <div className="top-bar-emergency">
+            <span className="emergency-label" style={{ color: '#94A3B8' }}>Animal Bite Emergency?</span>
             <Link href="/guidelines" style={{ color: '#38BDF8', fontWeight: 600, display: 'inline-flex', alignItems: 'center', gap: '0.25rem' }}>
-              PEP Clinical Protocol →
+              PEP Protocol →
             </Link>
           </div>
         </div>
@@ -185,8 +204,8 @@ export default function Navbar() {
         </nav>
       </div>
 
-      {/* Mobile Drawer */}
-      {mobileOpen && (
+      {/* Mobile Drawer (Portaled directly into body to completely escape sticky header bounds) */}
+      {mounted && mobileOpen && createPortal(
         <div className="mobile-drawer" onClick={() => setMobileOpen(false)}>
           <div className="mobile-drawer-panel" onClick={(e) => e.stopPropagation()}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -197,22 +216,24 @@ export default function Navbar() {
               <button 
                 type="button"
                 onClick={() => setMobileOpen(false)} 
-                style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}
+                style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)', padding: '0.35rem' }}
+                aria-label="Close menu"
+                id="close-mobile-menu-btn"
               >
-                <X size={22} />
+                <X size={24} />
               </button>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem', marginTop: '0.5rem' }}>
               {[...primaryLinks, ...resourceLinks].map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
                   className={`nav-link ${pathname === item.href ? 'active' : ''}`}
-                  style={{ padding: '0.75rem 0.6rem', fontSize: '0.95rem' }}
+                  style={{ padding: '0.8rem 0.75rem', fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '0.75rem', borderRadius: 'var(--radius-md)' }}
                 >
-                  <item.icon size={17} />
+                  <item.icon size={18} color="var(--primary)" />
                   {item.label}
                 </Link>
               ))}
@@ -223,7 +244,7 @@ export default function Navbar() {
                 href="/apply"
                 onClick={() => setMobileOpen(false)}
                 className="btn-nav-cta"
-                style={{ justifyContent: 'center', width: '100%', padding: '0.7rem' }}
+                style={{ justifyContent: 'center', width: '100%', padding: '0.75rem' }}
               >
                 <HeartPulse size={16} />
                 Join Consortium
@@ -233,14 +254,15 @@ export default function Navbar() {
                 href="/admin"
                 onClick={() => setMobileOpen(false)}
                 className="btn-nav-admin"
-                style={{ justifyContent: 'center', width: '100%', padding: '0.6rem' }}
+                style={{ justifyContent: 'center', width: '100%', padding: '0.65rem' }}
               >
                 <Lock size={14} />
                 Admin Portal
               </Link>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </header>
   );

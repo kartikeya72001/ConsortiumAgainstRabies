@@ -27,7 +27,7 @@ export default function ContactPage() {
         <div className="grid-2" style={{ gap: '3rem', alignItems: 'flex-start' }}>
           {/* Contact Details */}
           <div>
-            <div className="card" style={{ marginBottom: '1.5rem', padding: '2rem' }}>
+            <div className="card responsive-card" style={{ marginBottom: '1.5rem' }}>
               <h3 style={{ fontSize: '1.3rem', color: 'var(--primary-dark)', marginBottom: '1.25rem' }}>
                 Consortium Against Rabies (CAR)
               </h3>
@@ -85,7 +85,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="card" style={{ padding: '2.5rem', background: '#FFFFFF' }}>
+          <div className="card responsive-card" style={{ background: '#FFFFFF' }}>
             <h3 style={{ fontSize: '1.3rem', color: 'var(--primary-dark)', marginBottom: '1.5rem' }}>
               Send an Inquiry to Secretariat
             </h3>

@@ -244,22 +244,14 @@ export default function LeadershipMessages({ messages }) {
             <div 
               key={item.id} 
               id={item.id}
-              className="card"
+              className="card responsive-card"
               style={{
-                padding: '2.5rem',
                 background: '#FFFFFF',
                 borderTop: idx % 2 === 0 ? '5px solid var(--primary)' : '5px solid var(--accent-teal)',
                 boxShadow: 'var(--shadow-md)'
               }}
             >
-              <div 
-                style={{ 
-                  display: 'grid', 
-                  gridTemplateColumns: 'minmax(180px, 200px) 1fr', 
-                  gap: '2.5rem', 
-                  alignItems: 'flex-start' 
-                }}
-              >
+              <div className="responsive-message-grid">
                 {/* Portrait Column */}
                 <div style={{ textAlign: 'center' }}>
                   <img
@@ -362,22 +354,14 @@ export default function LeadershipMessages({ messages }) {
         /* ================= SPOTLIGHT FEATURED MESSAGE ================= */
         <div 
           id={activeMessage.id}
-          className="card" 
+          className="card responsive-card" 
           style={{ 
-            padding: '3rem', 
             background: '#FFFFFF', 
             borderTop: '5px solid var(--primary)',
             boxShadow: 'var(--shadow-lg)'
           }}
         >
-          <div 
-            style={{ 
-              display: 'grid', 
-              gridTemplateColumns: 'minmax(200px, 240px) 1fr', 
-              gap: '3rem', 
-              alignItems: 'flex-start' 
-            }}
-          >
+          <div className="responsive-message-grid">
             {/* Left Column: Leader Photo & Identity */}
             <div style={{ textAlign: 'center' }}>
               <div style={{ position: 'relative', display: 'inline-block', marginBottom: '1.25rem' }}>

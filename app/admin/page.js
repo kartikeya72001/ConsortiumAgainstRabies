@@ -17,7 +17,9 @@ import {
   X,
   AlertCircle,
   ExternalLink,
-  ShieldCheck
+  ShieldCheck,
+  Award,
+  UserCheck
 } from 'lucide-react';
 import initialMembers from '@/data/members.json';
 
@@ -27,9 +29,16 @@ export default function AdminPage() {
   const [authError, setAuthError] = useState('');
   
   // Data state
-  const [adminTab, setAdminTab] = useState('members'); // 'members' | 'applications'
+  const [adminTab, setAdminTab] = useState('members'); // 'members' | 'applications' | 'leadership'
   const [members, setMembers] = useState(initialMembers);
   const [applications, setApplications] = useState([]);
+  const [leadership, setLeadership] = useState({
+    currentExecutive: [],
+    pastPresidents: [],
+    pastTreasurers: [],
+    pastVicePresidents: [],
+    pastMembers: []
+  });
   const [searchTerm, setSearchTerm] = useState('');
   const [storageSource, setStorageSource] = useState('local'); // 'supabase' or 'local'
   const [loading, setLoading] = useState(false);
@@ -37,7 +46,7 @@ export default function AdminPage() {
   const [testingDb, setTestingDb] = useState(false);
   const [dbDiag, setDbDiag] = useState(null);
 
-  // Modal state
+  // Member Modal state
   const [showModal, setShowModal] = useState(false);
   const [editingMember, setEditingMember] = useState(null);
   const [formData, setFormData] = useState({
@@ -49,6 +58,27 @@ export default function AdminPage() {
     state_name: 'Delhi'
   });
 
+  // Leadership Modal state
+  const [showLeaderModal, setShowLeaderModal] = useState(false);
+  const [editingLeader, setEditingLeader] = useState(null);
+  const [leaderFormData, setLeaderFormData] = useState({
+    name: '',
+    role: 'Executive Council Member',
+    customRole: ''
+  });
+
+  const fetchLeadership = async () => {
+    try {
+      const res = await fetch('/api/leadership');
+      if (res.ok) {
+        const data = await res.json();
+        setLeadership(data);
+      }
+    } catch (err) {
+      console.warn('Failed to fetch leadership:', err);
+    }
+  };
+
   // Check stored auth
   useEffect(() => {
     const savedToken = localStorage.getItem('car_admin_token');
@@ -56,6 +86,7 @@ export default function AdminPage() {
       setIsAuthenticated(true);
       fetchMembers(savedToken);
       fetchApplications(savedToken);
+      fetchLeadership();
     }
   }, []);
 
@@ -284,6 +315,115 @@ export default function AdminPage() {
     }
   };
 
+  const handleOpenAddLeader = () => {
+    setEditingLeader(null);
+    setLeaderFormData({ name: '', role: 'Executive Council Member', customRole: '' });
+    setShowLeaderModal(true);
+  };
+
+  const handleOpenEditLeader = (leader) => {
+    setEditingLeader(leader);
+    const standardRoles = [
+      'President',
+      'Patron & Founder President',
+      'Vice-President',
+      'Hony. Secretary General & Founder',
+      'Hony. Secretary',
+      'Hony. Treasurer',
+      'Hony. Chief Advisor',
+      'Joint Secretary',
+      'Executive Council Member'
+    ];
+    const isStandard = standardRoles.includes(leader.role);
+    setLeaderFormData({
+      name: leader.name,
+      role: isStandard ? leader.role : 'Other',
+      customRole: isStandard ? '' : leader.role
+    });
+    setShowLeaderModal(true);
+  };
+
+  const handleSaveLeader = async (e) => {
+    e.preventDefault();
+    const token = localStorage.getItem('car_admin_token') || 'car_admin_2026_secure';
+    const finalRole = leaderFormData.role === 'Other' ? leaderFormData.customRole.trim() : leaderFormData.role.trim();
+    if (!leaderFormData.name.trim() || !finalRole) {
+      showNotify('Doctor name and role are required', 'error');
+      return;
+    }
+
+    try {
+      if (editingLeader) {
+        const res = await fetch('/api/leadership', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+          },
+          body: JSON.stringify({
+            id: editingLeader.id,
+            name: leaderFormData.name,
+            role: finalRole
+          })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          showNotify(`Updated leadership record for ${leaderFormData.name}!`);
+          setShowLeaderModal(false);
+          fetchLeadership();
+        } else {
+          showNotify(data.error || 'Failed to update leader', 'error');
+        }
+      } else {
+        const res = await fetch('/api/leadership', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`
+          },
+          body: JSON.stringify({
+            name: leaderFormData.name,
+            role: finalRole
+          })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          showNotify(`Enrolled ${leaderFormData.name} into Executive Council!`);
+          setShowLeaderModal(false);
+          fetchLeadership();
+        } else {
+          showNotify(data.error || 'Failed to add leader', 'error');
+        }
+      }
+    } catch (err) {
+      showNotify('Network error saving leadership', 'error');
+    }
+  };
+
+  const handleRemoveLeader = async (leader) => {
+    const confirmMsg = `Remove ${leader.name} (${leader.role}) from the active Executive Council?\n\nPer Consortium governance rules, this leader will automatically be preserved in the Honor Roll / Past Leadership list.`;
+    if (!confirm(confirmMsg)) return;
+
+    const token = localStorage.getItem('car_admin_token') || 'car_admin_2026_secure';
+    try {
+      const res = await fetch(`/api/leadership?id=${leader.id}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        showNotify(`${leader.name} moved to ${data.movedTo || 'Past Leadership'}!`);
+        fetchLeadership();
+      } else {
+        showNotify(data.error || 'Failed to remove leader', 'error');
+      }
+    } catch (err) {
+      showNotify('Network error removing leader', 'error');
+    }
+  };
+
   // Filter members
   const filtered = members.filter((m) => {
     if (!searchTerm) return true;
@@ -301,7 +441,7 @@ export default function AdminPage() {
     return (
       <div className="section" style={{ minHeight: '80vh', display: 'flex', alignItems: 'center', background: '#F8FAFC' }}>
         <div className="container" style={{ maxWidth: 460 }}>
-          <div className="card" style={{ padding: '2.5rem', background: '#FFFFFF', boxShadow: 'var(--shadow-xl)' }}>
+          <div className="card responsive-card" style={{ background: '#FFFFFF', boxShadow: 'var(--shadow-xl)' }}>
             <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
               <div style={{ width: 56, height: 56, borderRadius: '50%', background: 'var(--primary-subtle)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
                 <Lock size={26} />
@@ -360,8 +500,9 @@ export default function AdminPage() {
         {notification && (
           <div style={{
             position: 'fixed',
-            bottom: '2rem',
-            right: '2rem',
+            bottom: '1rem',
+            right: '1rem',
+            maxWidth: 'calc(100vw - 2rem)',
             zIndex: 1000,
             background: notification.type === 'error' ? '#E11D48' : '#0D9488',
             color: '#FFFFFF',
@@ -392,15 +533,27 @@ export default function AdminPage() {
           </div>
 
           <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>
-            <button 
-              type="button"
-              onClick={handleOpenAdd} 
-              className="btn btn-teal"
-              id="admin-add-member-btn"
-            >
-              <PlusCircle size={16} />
-              Add New Life Member
-            </button>
+            {adminTab === 'leadership' ? (
+              <button 
+                type="button"
+                onClick={handleOpenAddLeader} 
+                className="btn btn-teal"
+                id="admin-add-leader-btn"
+              >
+                <PlusCircle size={16} />
+                Add New Leader
+              </button>
+            ) : (
+              <button 
+                type="button"
+                onClick={handleOpenAdd} 
+                className="btn btn-teal"
+                id="admin-add-member-btn"
+              >
+                <PlusCircle size={16} />
+                Add New Life Member
+              </button>
+            )}
             <button 
               type="button"
               onClick={handleLogout} 
@@ -555,6 +708,29 @@ export default function AdminPage() {
               </span>
             )}
           </button>
+
+          <button
+            type="button"
+            onClick={() => setAdminTab('leadership')}
+            style={{
+              padding: '0.65rem 1.25rem',
+              borderRadius: 'var(--radius-full)',
+              border: adminTab === 'leadership' ? '2px solid var(--primary)' : '1px solid var(--border-subtle)',
+              background: adminTab === 'leadership' ? 'var(--primary)' : '#FFFFFF',
+              color: adminTab === 'leadership' ? '#FFFFFF' : 'var(--text-main)',
+              fontWeight: 700,
+              fontSize: '0.9rem',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              boxShadow: 'var(--shadow-sm)'
+            }}
+            id="admin-tab-leadership-btn"
+          >
+            <Award size={16} />
+            Executive Leadership ({(leadership?.currentExecutive || []).length})
+          </button>
         </div>
 
         {adminTab === 'applications' ? (
@@ -669,6 +845,172 @@ export default function AdminPage() {
               </div>
             )}
           </div>
+        ) : adminTab === 'leadership' ? (
+          /* ================= LEADERSHIP MANAGEMENT ================= */
+          <div className="card" style={{ padding: '1.5rem', background: '#FFFFFF' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+              <div>
+                <h2 style={{ fontSize: '1.4rem', color: 'var(--primary-dark)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Award size={22} color="var(--primary)" />
+                  Executive Council & Leadership ({(leadership?.currentExecutive || []).length})
+                </h2>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '0.25rem' }}>
+                  Active governing body guiding the Consortium. Any officer removed is automatically preserved in the <strong>Honor Roll & Past Leadership</strong> archives.
+                </p>
+              </div>
+
+              <button
+                type="button"
+                onClick={handleOpenAddLeader}
+                className="btn btn-primary btn-sm"
+                id="leadership-add-btn"
+              >
+                <PlusCircle size={15} />
+                Add Executive Leader
+              </button>
+            </div>
+
+            {/* Current Executive Council Table */}
+            <div style={{ overflowX: 'auto', marginBottom: '2.5rem' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.875rem' }}>
+                <thead>
+                  <tr style={{ background: '#F8FAFC', borderBottom: '1px solid var(--border-subtle)', color: 'var(--text-muted)' }}>
+                    <th style={{ padding: '0.75rem 1rem', fontWeight: 600, width: 60 }}>#</th>
+                    <th style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Doctor's Name</th>
+                    <th style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Designation / Office Role</th>
+                    <th style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Status</th>
+                    <th style={{ padding: '0.75rem 1rem', fontWeight: 600, textAlign: 'right' }}>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {(leadership?.currentExecutive || []).map((leader, idx) => (
+                    <tr key={leader.id || idx} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
+                      <td style={{ padding: '0.75rem 1rem', color: 'var(--text-light)', fontWeight: 600 }}>
+                        {idx + 1}
+                      </td>
+                      <td style={{ padding: '0.75rem 1rem', fontWeight: 700, color: 'var(--primary-dark)' }}>
+                        {leader.name}
+                      </td>
+                      <td style={{ padding: '0.75rem 1rem' }}>
+                        <span className="badge badge-teal" style={{ fontSize: '0.8rem', padding: '0.25rem 0.65rem' }}>
+                          {leader.role}
+                        </span>
+                      </td>
+                      <td style={{ padding: '0.75rem 1rem' }}>
+                        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.35rem', color: '#10B981', fontSize: '0.8rem', fontWeight: 600 }}>
+                          <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#10B981' }}></span>
+                          Active Council
+                        </span>
+                      </td>
+                      <td style={{ padding: '0.75rem 1rem', textAlign: 'right' }}>
+                        <div style={{ display: 'inline-flex', gap: '0.4rem' }}>
+                          <button
+                            type="button"
+                            onClick={() => handleOpenEditLeader(leader)}
+                            className="btn btn-outline btn-sm"
+                            style={{ padding: '0.3rem 0.6rem' }}
+                            title="Edit leader name or role"
+                            id={`edit-leader-btn-${leader.id || idx}`}
+                          >
+                            <Edit2 size={13} />
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleRemoveLeader(leader)}
+                            className="btn btn-outline btn-sm"
+                            style={{ padding: '0.3rem 0.6rem', color: '#E11D48', borderColor: '#FECDD3' }}
+                            title="Remove leader & move to Past Leadership"
+                            id={`remove-leader-btn-${leader.id || idx}`}
+                          >
+                            <Trash2 size={13} />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Honor Roll & Past Leadership Section */}
+            <div style={{ background: '#F8FAFC', borderRadius: 'var(--radius-md)', padding: '1.5rem', border: '1px solid #E2E8F0' }}>
+              <div style={{ marginBottom: '1.25rem' }}>
+                <span className="badge badge-blue" style={{ marginBottom: '0.3rem', display: 'inline-block' }}>
+                  Automatic Archive
+                </span>
+                <h3 style={{ fontSize: '1.15rem', color: 'var(--primary-dark)', fontWeight: 700 }}>
+                  Honor Roll & Past Leadership ({
+                    (leadership?.pastPresidents?.length || 0) +
+                    (leadership?.pastTreasurers?.length || 0) +
+                    (leadership?.pastVicePresidents?.length || 0) +
+                    (leadership?.pastMembers?.length || 0)
+                  } Recorded)
+                </h3>
+                <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+                  When leaders are removed from the active council, they appear here according to their former office.
+                </p>
+              </div>
+
+              <div className="grid-3" style={{ gap: '1.25rem' }}>
+                {/* Past Presidents */}
+                <div style={{ background: '#FFFFFF', padding: '1rem 1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <strong style={{ fontSize: '0.9rem', color: 'var(--primary)', display: 'block', marginBottom: '0.5rem', borderBottom: '1px solid #E2E8F0', paddingBottom: '0.35rem' }}>
+                    Past Presidents ({(leadership?.pastPresidents || []).length})
+                  </strong>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.85rem' }}>
+                    {(leadership?.pastPresidents || []).map((name, i) => (
+                      <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                        <ShieldCheck size={14} color="#0D9488" /> {name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Past Treasurers */}
+                <div style={{ background: '#FFFFFF', padding: '1rem 1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <strong style={{ fontSize: '0.9rem', color: 'var(--accent-teal)', display: 'block', marginBottom: '0.5rem', borderBottom: '1px solid #E2E8F0', paddingBottom: '0.35rem' }}>
+                    Past Treasurers ({(leadership?.pastTreasurers || []).length})
+                  </strong>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.85rem' }}>
+                    {(leadership?.pastTreasurers || []).map((name, i) => (
+                      <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                        <ShieldCheck size={14} color="#0D9488" /> {name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Past Vice Presidents */}
+                <div style={{ background: '#FFFFFF', padding: '1rem 1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <strong style={{ fontSize: '0.9rem', color: 'var(--accent-coral)', display: 'block', marginBottom: '0.5rem', borderBottom: '1px solid #E2E8F0', paddingBottom: '0.35rem' }}>
+                    Past Vice Presidents ({(leadership?.pastVicePresidents || []).length})
+                  </strong>
+                  <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.4rem', fontSize: '0.85rem' }}>
+                    {(leadership?.pastVicePresidents || []).map((name, i) => (
+                      <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                        <ShieldCheck size={14} color="#0D9488" /> {name}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {(leadership?.pastMembers || []).length > 0 && (
+                <div style={{ marginTop: '1.25rem', background: '#FFFFFF', padding: '1rem 1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+                  <strong style={{ fontSize: '0.9rem', color: '#D97706', display: 'block', marginBottom: '0.5rem', borderBottom: '1px solid #E2E8F0', paddingBottom: '0.35rem' }}>
+                    Past Executive Council Members ({(leadership?.pastMembers || []).length})
+                  </strong>
+                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: '0.5rem', fontSize: '0.85rem' }}>
+                    {(leadership?.pastMembers || []).map((entry, i) => (
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+                        <ShieldCheck size={14} color="#D97706" /> {typeof entry === 'object' ? `${entry.name} (${entry.role})` : entry}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
         ) : (
           /* ================= MEMBERS MANAGEMENT TABLE ================= */
           <div className="card" style={{ padding: '1.5rem', background: '#FFFFFF' }}>
@@ -752,8 +1094,8 @@ export default function AdminPage() {
 
         {/* Modal for Add / Edit */}
         {showModal && (
-          <div style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem' }}>
-            <div className="card" style={{ maxWidth: 560, width: '100%', padding: '2rem', background: '#FFFFFF' }} onClick={(e) => e.stopPropagation()}>
+          <div style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
+            <div className="card responsive-card" style={{ maxWidth: 560, width: '100%', maxHeight: '90vh', overflowY: 'auto', background: '#FFFFFF' }} onClick={(e) => e.stopPropagation()}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', paddingBottom: '0.75rem', borderBottom: '1px solid var(--border-subtle)' }}>
                 <h3 style={{ fontSize: '1.3rem', color: 'var(--primary-dark)' }}>
                   {editingMember ? 'Edit Life Member' : 'Add New Life Member'}
@@ -854,6 +1196,101 @@ export default function AdminPage() {
                   >
                     <Save size={15} />
                     {editingMember ? 'Save Changes' : 'Create Member'}
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
+
+        {/* Modal for Leader Add / Edit */}
+        {showLeaderModal && (
+          <div style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1rem' }}>
+            <div className="card responsive-card" style={{ maxWidth: 520, width: '100%', maxHeight: '90vh', overflowY: 'auto', background: '#FFFFFF' }} onClick={(e) => e.stopPropagation()}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', paddingBottom: '0.75rem', borderBottom: '1px solid var(--border-subtle)' }}>
+                <h3 style={{ fontSize: '1.3rem', color: 'var(--primary-dark)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <Award size={20} color="var(--primary)" />
+                  {editingLeader ? 'Edit Executive Leader' : 'Add Executive Leader'}
+                </h3>
+                <button 
+                  type="button"
+                  onClick={() => setShowLeaderModal(false)} 
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)' }}
+                  id="close-leader-modal-btn"
+                >
+                  <X size={20} />
+                </button>
+              </div>
+
+              <form onSubmit={handleSaveLeader}>
+                <div className="form-group">
+                  <label className="form-label">Doctor's Full Name (with title) *</label>
+                  <input
+                    type="text"
+                    required
+                    className="form-control"
+                    placeholder="e.g. Dr. Rajiv Gupta"
+                    value={leaderFormData.name}
+                    onChange={(e) => setLeaderFormData({ ...leaderFormData, name: e.target.value })}
+                    id="leader-name-input"
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label className="form-label">Executive Role / Designation *</label>
+                  <select
+                    className="form-control"
+                    value={leaderFormData.role}
+                    onChange={(e) => setLeaderFormData({ ...leaderFormData, role: e.target.value })}
+                    id="leader-role-select"
+                  >
+                    <option value="President">President</option>
+                    <option value="Vice-President">Vice-President</option>
+                    <option value="Hony. Secretary General & Founder">Hony. Secretary General & Founder</option>
+                    <option value="Hony. Secretary">Hony. Secretary</option>
+                    <option value="Hony. Treasurer">Hony. Treasurer</option>
+                    <option value="Hony. Chief Advisor">Hony. Chief Advisor</option>
+                    <option value="Joint Secretary">Joint Secretary</option>
+                    <option value="Patron & Founder President">Patron & Founder President</option>
+                    <option value="Executive Council Member">Executive Council Member</option>
+                    <option value="Other">Other (Custom Role)</option>
+                  </select>
+                </div>
+
+                {leaderFormData.role === 'Other' && (
+                  <div className="form-group">
+                    <label className="form-label">Specify Custom Role Title *</label>
+                    <input
+                      type="text"
+                      required
+                      className="form-control"
+                      placeholder="e.g. Zonal Coordinator - North Zone"
+                      value={leaderFormData.customRole}
+                      onChange={(e) => setLeaderFormData({ ...leaderFormData, customRole: e.target.value })}
+                      id="leader-custom-role-input"
+                    />
+                  </div>
+                )}
+
+                <div style={{ background: '#F8FAFC', padding: '0.85rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)', marginBottom: '1.25rem', fontSize: '0.825rem', color: 'var(--text-muted)' }}>
+                  <strong>Governance Note:</strong> When this leader's active tenure ends and they are removed from office, the system will automatically preserve their record in the <strong>Honor Roll / Past Leadership</strong> archives.
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.75rem', marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid var(--border-subtle)' }}>
+                  <button 
+                    type="button" 
+                    onClick={() => setShowLeaderModal(false)} 
+                    className="btn btn-outline"
+                  >
+                    Cancel
+                  </button>
+                  <button 
+                    type="submit" 
+                    className="btn btn-primary"
+                    id="save-leader-modal-submit-btn"
+                  >
+                    <Save size={15} />
+                    {editingLeader ? 'Save Leader Changes' : 'Enroll Leader'}
                   </button>
                 </div>
               </form>

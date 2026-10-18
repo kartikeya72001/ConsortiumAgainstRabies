@@ -160,14 +160,7 @@ export default function GalleryPage() {
         </div>
 
         {/* Gallery Image Grid */}
-        <div 
-          style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', 
-            gap: '1.25rem',
-            marginBottom: '3rem'
-          }}
-        >
+        <div className="gallery-grid">
           {visibleImages.map((img, idx) => (
             <div 
               key={idx} 

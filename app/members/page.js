@@ -155,7 +155,7 @@ export default function MembersPage() {
 
         {/* Filter and Search Bar */}
         <div className="card" style={{ marginBottom: '2rem', padding: '1.25rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: '1rem', alignItems: 'center' }}>
+          <div className="responsive-search-row">
             <div className="search-box-wrapper">
               <Search className="search-icon-pos" size={18} />
               <input

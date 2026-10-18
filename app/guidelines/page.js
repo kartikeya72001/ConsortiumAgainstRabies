@@ -67,7 +67,7 @@ export default function GuidelinesPage() {
           Risk Assessment & Category Triage
         </h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1.5rem', marginBottom: '3.5rem' }}>
+        <div className="grid-3" style={{ marginBottom: '3.5rem' }}>
           {/* Category I */}
           <div className="card" style={{ borderTop: '4px solid #10B981' }}>
             <span className="badge badge-teal" style={{ marginBottom: '0.75rem' }}>Category I</span>
@@ -115,8 +115,8 @@ export default function GuidelinesPage() {
         </div>
 
         {/* Intradermal Route (IDRV) Feature */}
-        <div className="card" style={{ padding: '2.5rem', background: '#FFFFFF', marginBottom: '3.5rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', alignItems: 'center' }}>
+        <div className="card responsive-card" style={{ background: '#FFFFFF', marginBottom: '3.5rem' }}>
+          <div className="grid-2" style={{ alignItems: 'center', gap: '2.5rem' }}>
             <div>
               <span className="badge badge-blue" style={{ marginBottom: '0.5rem' }}>Clinical Update</span>
               <h2 style={{ fontSize: '1.8rem', color: 'var(--primary-dark)', marginBottom: '1rem' }}>
