@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
 import { 
   Search, 
@@ -18,23 +18,46 @@ import {
 import initialMembers from '@/data/members.json';
 
 export default function MembersPage() {
+  const [members, setMembers] = useState(initialMembers);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedState, setSelectedState] = useState('ALL');
   const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'table'
+  const [loading, setLoading] = useState(false);
+
+  // Fetch live members from API (Supabase or updated store)
+  useEffect(() => {
+    async function fetchLiveMembers() {
+      try {
+        setLoading(true);
+        const res = await fetch('/api/members?limit=1000');
+        if (res.ok) {
+          const data = await res.json();
+          if (data.members && data.members.length > 0) {
+            setMembers(data.members);
+          }
+        }
+      } catch (err) {
+        console.warn('Using static members fallback:', err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchLiveMembers();
+  }, []);
 
   // Extract unique states and counts
   const stateCounts = useMemo(() => {
-    const counts = { ALL: initialMembers.length };
-    initialMembers.forEach((m) => {
+    const counts = { ALL: members.length };
+    members.forEach((m) => {
       const code = m.state_code || 'OTHER';
       counts[code] = (counts[code] || 0) + 1;
     });
     return counts;
-  }, []);
+  }, [members]);
 
   // Filter members
   const filteredMembers = useMemo(() => {
-    return initialMembers.filter((m) => {
+    return members.filter((m) => {
       const matchesState = selectedState === 'ALL' || m.state_code === selectedState;
       if (!matchesState) return false;
 
@@ -48,7 +71,7 @@ export default function MembersPage() {
         (m.state_name && m.state_name.toLowerCase().includes(q))
       );
     });
-  }, [searchTerm, selectedState]);
+  }, [members, searchTerm, selectedState]);
 
   // Export to CSV
   const handleExportCSV = () => {
@@ -72,16 +95,32 @@ export default function MembersPage() {
     document.body.removeChild(link);
   };
 
-  const topStates = [
-    { code: 'ALL', label: 'All India' },
-    { code: 'DL', label: 'Delhi' },
-    { code: 'UP', label: 'Uttar Pradesh' },
-    { code: 'UK', label: 'Uttarakhand' },
-    { code: 'HR', label: 'Haryana' },
-    { code: 'HP', label: 'Himachal' },
-    { code: 'RJ', label: 'Rajasthan' },
-    { code: 'MP', label: 'Madhya Pradesh' },
-  ];
+  const stateLabels = {
+    DL: 'Delhi', UP: 'Uttar Pradesh', UK: 'Uttarakhand', HR: 'Haryana',
+    HP: 'Himachal', RJ: 'Rajasthan', MP: 'Madhya Pradesh', KA: 'Karnataka',
+    MH: 'Maharashtra', PB: 'Punjab', WB: 'West Bengal', TN: 'Tamil Nadu',
+    KL: 'Kerala', GJ: 'Gujarat', AP: 'Andhra Pradesh', TS: 'Telangana',
+    BR: 'Bihar', OD: 'Odisha', AS: 'Assam', JK: 'Jammu & Kashmir', CH: 'Chandigarh'
+  };
+
+  const availableStates = useMemo(() => {
+    const list = [{ code: 'ALL', label: 'All India' }];
+    const seen = new Set();
+    const primaryCodes = ['DL', 'UP', 'UK', 'HR', 'HP', 'RJ', 'MP'];
+    primaryCodes.forEach((code) => {
+      seen.add(code);
+      list.push({ code, label: stateLabels[code] || code });
+    });
+    // Add any additional states present in members
+    members.forEach((m) => {
+      const code = m.state_code;
+      if (code && !seen.has(code)) {
+        seen.add(code);
+        list.push({ code, label: stateLabels[code] || m.state_name || code });
+      }
+    });
+    return list;
+  }, [members]);
 
   return (
     <div className="section" style={{ background: '#F8FAFC', minHeight: '80vh' }}>
@@ -159,7 +198,7 @@ export default function MembersPage() {
             <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--text-muted)', display: 'inline-flex', alignItems: 'center', gap: '0.3rem', marginRight: '0.5rem' }}>
               <Filter size={14} /> Filter State:
             </span>
-            {topStates.map((st) => {
+            {availableStates.map((st) => {
               const isSelected = selectedState === st.code;
               const count = stateCounts[st.code] || 0;
               return (
@@ -191,7 +230,7 @@ export default function MembersPage() {
         {/* Results summary */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.25rem' }}>
           <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-            Showing <strong>{filteredMembers.length}</strong> of <strong>{initialMembers.length}</strong> members
+            Showing <strong>{filteredMembers.length}</strong> of <strong>{members.length}</strong> members
             {selectedState !== 'ALL' && ` in ${selectedState}`}
             {searchTerm && ` matching "${searchTerm}"`}
           </p>

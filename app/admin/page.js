@@ -94,7 +94,7 @@ export default function AdminPage() {
   const fetchMembers = async (token) => {
     setLoading(true);
     try {
-      const res = await fetch('/api/members?limit=300');
+      const res = await fetch('/api/members?limit=1000');
       if (res.ok) {
         const data = await res.json();
         setMembers(data.members || initialMembers);

@@ -30,10 +30,10 @@ CREATE POLICY "Public members are viewable by everyone"
   ON members FOR SELECT
   USING (true);
 
--- Allow authenticated admins to insert, update, delete
-CREATE POLICY "Admins can manage members"
+-- Allow authenticated admins / server routes to insert, update, delete
+DROP POLICY IF EXISTS "Admins can manage members" ON members;
+CREATE POLICY "Enable all access for members"
   ON members FOR ALL
-  TO authenticated
   USING (true)
   WITH CHECK (true);
 
@@ -63,9 +63,9 @@ CREATE POLICY "Public can submit membership applications"
   ON membership_applications FOR INSERT
   WITH CHECK (true);
 
-CREATE POLICY "Admins can manage applications"
+DROP POLICY IF EXISTS "Admins can manage applications" ON membership_applications;
+CREATE POLICY "Enable all access for applications"
   ON membership_applications FOR ALL
-  TO authenticated
   USING (true)
   WITH CHECK (true);
 
