@@ -1,0 +1,68 @@
+{
+  "patron": {
+    "title": "Patron and Founder President",
+    "name": "Dr. A.T. Kannan",
+    "image": "/Patron.jpg",
+    "designation": "Formerly Prof & Head, Dept. of Community Medicine, UCMS & GTB Hospital, Delhi",
+    "messageSnippet": "It is a great honour to take on this endeavour of making India Rabies free with the start of Consortium Against Rabies. The aim of this consortium is to focus on the issues related to Rabies, which is an often neglected disease..."
+  },
+  "currentExecutive": [
+    {
+      "role": "President",
+      "name": "Dr. Rajnish",
+      "category": "core"
+    },
+    {
+      "role": "Hony. Secretary General & Founder",
+      "name": "Dr. Anurag Agarwal",
+      "category": "core"
+    },
+    {
+      "role": "Hony. Secretary",
+      "name": "Dr. Khan Amir Maroof",
+      "category": "core"
+    },
+    {
+      "role": "Hony. Treasurer",
+      "name": "Dr. Deepak Gautam",
+      "category": "core"
+    },
+    {
+      "role": "Vice-President",
+      "name": "Dr. Suma Nair",
+      "category": "vp"
+    },
+    {
+      "role": "Vice-President",
+      "name": "Dr. Rajinder Singh",
+      "category": "vp"
+    },
+    {
+      "role": "Hony. Chief Advisor",
+      "name": "Dr. R.B. Jain",
+      "category": "advisor"
+    },
+    {
+      "role": "Hony. Chief Advisor",
+      "name": "Dr. Anil Arya",
+      "category": "advisor"
+    }
+  ],
+  "pastPresidents": [
+    "Dr. A.T. Kannan",
+    "Dr. Surekha Kishore",
+    "Dr. J.V. Singh",
+    "Dr. G.P. Kaushal",
+    "Dr. Harishankar Joshi"
+  ],
+  "pastTreasurers": [
+    "Dr. G.P. Kaushal",
+    "Dr. Rajender Singh"
+  ],
+  "pastVicePresidents": [
+    "Dr. Naveen",
+    "Dr. C.M. Singh",
+    "Dr. Manish Singh",
+    "Dr. Deepak Saxena"
+  ]
+}

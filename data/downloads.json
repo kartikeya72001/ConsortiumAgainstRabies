@@ -1,0 +1,66 @@
+[
+  {
+    "id": "form-2019",
+    "title": "Life Membership Application Form",
+    "file": "/downloads/life_membership_application_form_car_2019.doc",
+    "category": "Membership",
+    "type": "DOC",
+    "description": "Official application form to enroll as a Life Member of Consortium Against Rabies."
+  },
+  {
+    "id": "rabies-booklet",
+    "title": "Rabies - Information Booklet by CAR",
+    "file": "/downloads/rabies-_information_booklet_by_consortium_against_rabies.pdf",
+    "category": "Education",
+    "type": "PDF",
+    "description": "Comprehensive booklet covering rabies etiology, animal bite risks, first aid, and post-exposure prophylaxis."
+  },
+  {
+    "id": "who-wer9316",
+    "title": "WHO Rabies Vaccines Position Paper (WER9316)",
+    "file": "/downloads/WER9316.pdf",
+    "category": "Guidelines",
+    "type": "PDF",
+    "description": "World Health Organization Weekly Epidemiological Record on rabies vaccines and immunoglobulins."
+  },
+  {
+    "id": "pep-chart",
+    "title": "Post Exposure Prophylaxis (PEP) Algorithm Chart",
+    "file": "/downloads/PostExposureProphylaxis.png",
+    "category": "Clinical",
+    "type": "PNG",
+    "description": "Step-by-step clinical triage chart for wound categories, vaccine schedules, and RIG administration."
+  },
+  {
+    "id": "cme-anurag",
+    "title": "CAR CME Lecture Notes - Dr. Anurag Agarwal",
+    "file": "/downloads/anurag_cme_16_nov_2019_rml_lucknow.pdf",
+    "category": "CME & Lectures",
+    "type": "PDF",
+    "description": "CME presentation delivered at Dr. RMLIMS Lucknow on paediatric rabies and management guidelines."
+  },
+  {
+    "id": "cme-amir",
+    "title": "CAR CME Lecture Notes - Dr. Khan Amir Maroof",
+    "file": "/downloads/dr_amir_cme_16_nov_2019_rml_lucknow.pdf",
+    "category": "CME & Lectures",
+    "type": "PDF",
+    "description": "Public health perspectives and intradermal vaccination updates presented by Dr. Maroof."
+  },
+  {
+    "id": "cme-kaushal",
+    "title": "CAR CME Presentation - Dr. G.P. Kaushal",
+    "file": "/downloads/kaushal_dr__cme_16_nov_2019__rml_lucknow.pdf",
+    "category": "CME & Lectures",
+    "type": "PDF",
+    "description": "Clinical insights on animal bite injury management and wound treatment."
+  },
+  {
+    "id": "car-background-paper",
+    "title": "Rabies Background Presentation",
+    "file": "/downloads/rabies_background_paper.ppt",
+    "category": "Presentations",
+    "type": "PPT",
+    "description": "Slide deck detailing epidemiological trends, stray dog rabies control, and One Health approaches."
+  }
+]

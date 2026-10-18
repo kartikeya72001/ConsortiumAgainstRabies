@@ -1,0 +1,57 @@
+[
+  {
+    "year": "2023",
+    "name": "CARCON 2023",
+    "title": "The National Conference of Consortium Against Rabies",
+    "dates": "8-9 December 2023",
+    "image": "/Carcon-23.webp",
+    "brochureUrl": "https://drive.google.com/file/d/100HAZfk59T9bZx4Ct8b0ek99yNBTegao/view?usp=sharing",
+    "description": "National gathering focusing on rabies epidemiology, animal bite management, intradermal rabies vaccination (IDRV), and policy recommendations towards rabies-free India 2030."
+  },
+  {
+    "year": "2020",
+    "name": "CARCON 2020",
+    "title": "National Rabies Prevention Summit",
+    "dates": "October 2020",
+    "image": "/Wallpapernew.jpg",
+    "brochureUrl": "#",
+    "description": "Virtual scientific conference covering rabies prevention protocols during healthcare challenges, PEP adherence, and clinical updates."
+  },
+  {
+    "year": "2019",
+    "name": "CARCON 2019",
+    "title": "National Rabies Conference & CME",
+    "dates": "16-17 November 2019",
+    "venue": "Dr. Ram Manohar Lohia Institute of Medical Sciences (RMLIMS), Lucknow",
+    "image": "/2019.jpg",
+    "brochureUrl": "/downloads/anurag_cme_16_nov_2019_rml_lucknow.pdf",
+    "description": "Extensive continuing medical education (CME) on bite management, immunoglobulins, and modern cell-culture vaccines."
+  },
+  {
+    "year": "2018",
+    "name": "CARCON 2018",
+    "title": "National Rabies Symposium",
+    "dates": "2018",
+    "image": "/2018.jpg",
+    "brochureUrl": "#",
+    "description": "Multidisciplinary dialogue between public health experts, pediatricians, veterinary authorities, and community health leaders."
+  },
+  {
+    "year": "2017",
+    "name": "CARCON 2017",
+    "title": "National Conference on Zero Rabies Deaths",
+    "dates": "2017",
+    "image": "/2017.jpg",
+    "brochureUrl": "#",
+    "description": "Advancing the strategic goal of zero human rabies deaths and promoting standardized wound management clinics across districts."
+  },
+  {
+    "year": "2014",
+    "name": "CARCON 2014",
+    "title": "Inaugural Foundation Conference",
+    "dates": "2014",
+    "image": "/2014.jpg",
+    "brochureUrl": "/downloads/carcon2011.pdf",
+    "description": "The landmark inception event bringing together founding doctors, professors, and health researchers to establish the Consortium Against Rabies."
+  }
+]
