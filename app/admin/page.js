@@ -34,6 +34,8 @@ export default function AdminPage() {
   const [storageSource, setStorageSource] = useState('local'); // 'supabase' or 'local'
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState(null);
+  const [testingDb, setTestingDb] = useState(false);
+  const [dbDiag, setDbDiag] = useState(null);
 
   // Modal state
   const [showModal, setShowModal] = useState(false);
@@ -120,6 +122,26 @@ export default function AdminPage() {
       }
     } catch (err) {
       console.warn('Failed to fetch applications:', err);
+    }
+  };
+
+  const checkDbConnection = async () => {
+    setTestingDb(true);
+    try {
+      const res = await fetch('/api/db-status');
+      const data = await res.json();
+      setDbDiag(data);
+      if (data.status === 'connected') {
+        setStorageSource('supabase');
+        showNotify(`Supabase connected! Total records in DB: ${data.queryResult?.totalCount || 0}`);
+        fetchMembers();
+      } else {
+        showNotify('Supabase not connected. Review diagnostics below.', 'error');
+      }
+    } catch (err) {
+      showNotify('Failed to reach db-status API', 'error');
+    } finally {
+      setTestingDb(false);
     }
   };
 
@@ -399,17 +421,52 @@ export default function AdminPage() {
               <span style={{ fontSize: '0.825rem', fontWeight: 600, color: 'var(--text-muted)' }}>Database Engine</span>
               <Database size={18} color="var(--primary)" />
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <span style={{ width: 10, height: 10, borderRadius: '50%', background: storageSource === 'supabase' ? '#10B981' : '#F59E0B' }}></span>
-              <strong style={{ fontSize: '1.1rem', color: 'var(--primary-dark)' }}>
-                {storageSource === 'supabase' ? 'Supabase PostgreSQL' : 'Local / Git Persistence'}
-              </strong>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <span style={{ width: 10, height: 10, borderRadius: '50%', background: storageSource === 'supabase' ? '#10B981' : '#F59E0B' }}></span>
+                <strong style={{ fontSize: '1.05rem', color: 'var(--primary-dark)' }}>
+                  {storageSource === 'supabase' ? 'Supabase PostgreSQL' : 'Local / Git Persistence'}
+                </strong>
+              </div>
+              <button
+                type="button"
+                onClick={checkDbConnection}
+                disabled={testingDb}
+                className="btn btn-sm btn-outline"
+                style={{ fontSize: '0.75rem', padding: '0.2rem 0.55rem', height: 'auto' }}
+                title="Test Supabase connection"
+              >
+                {testingDb ? 'Testing...' : 'Test Connection'}
+              </button>
             </div>
             <p style={{ fontSize: '0.75rem', color: 'var(--text-light)', marginTop: '0.35rem' }}>
               {storageSource === 'supabase' 
-                ? 'Connected to 500MB free PostgreSQL database' 
-                : 'Reading/saving to data/members.json (Ready to connect Supabase)'}
+                ? 'Connected to live Supabase PostgreSQL database' 
+                : 'Using local store. Click Test Connection to verify Supabase in Vercel.'}
             </p>
+            {dbDiag && (
+              <div style={{ marginTop: '0.75rem', padding: '0.6rem', background: '#F8FAFC', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)', fontSize: '0.75rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.25rem' }}>
+                  <strong>Diagnostic Status:</strong>
+                  <span style={{ color: dbDiag.status === 'connected' ? '#10B981' : '#EF4444', fontWeight: 600 }}>
+                    {dbDiag.status.toUpperCase()}
+                  </span>
+                </div>
+                <div>Detected Keys: {dbDiag.diagnostics?.activeKeys?.join(', ') || 'None found'}</div>
+                {dbDiag.queryError && (
+                  <div style={{ color: '#EF4444', marginTop: '0.25rem' }}>
+                    Error: {dbDiag.queryError.message} (Code: {dbDiag.queryError.code || 'N/A'})
+                  </div>
+                )}
+                {dbDiag.troubleshooting && (
+                  <ul style={{ margin: '0.5rem 0 0 1rem', padding: 0, color: 'var(--text-muted)' }}>
+                    {dbDiag.troubleshooting.map((tip, idx) => (
+                      <li key={idx} style={{ marginBottom: '0.2rem' }}>{tip}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Members Counter */}
