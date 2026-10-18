@@ -1,0 +1,20 @@
+[
+  {
+    "fullName": "Dr. Sunita Sharma",
+    "email": "sunita.sharma@example.com",
+    "phone": "+91 9811122334",
+    "qualification": "MD (Community Medicine)",
+    "speciality": "Community Medicine",
+    "designation": "Associate Professor",
+    "institution": "Lady Hardinge Medical College",
+    "city": "New Delhi",
+    "state": "Delhi",
+    "registrationNumber": "DMC/R/12458",
+    "reference": "CAR-APP-449027",
+    "status": "approved",
+    "created_at": "2026-10-18T07:08:06.736Z",
+    "id": 1,
+    "approved_membership_id": "DL/CAR/180",
+    "approved_at": "2026-10-18T07:16:44.480Z"
+  }
+]

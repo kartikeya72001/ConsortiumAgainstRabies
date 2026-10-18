@@ -17,7 +17,8 @@ import {
   Mail, 
   ChevronDown, 
   Home,
-  FileText
+  FileText,
+  Activity
 } from 'lucide-react';
 
 export default function Navbar() {
@@ -42,6 +43,7 @@ export default function Navbar() {
     { href: '/', label: 'Home', icon: Home },
     { href: '/members', label: 'Life Members', icon: Users },
     { href: '/conferences', label: 'CARCON', icon: Calendar },
+    { href: '/activities', label: 'Activities', icon: Activity },
     { href: '/guidelines', label: 'Guidelines', icon: ShieldAlert },
     { href: '/leadership', label: 'Leadership', icon: Award },
   ];

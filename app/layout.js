@@ -30,13 +30,14 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <link rel="icon" href="/Logo.jpg" />
-      </head>
       <body>
         <Navbar />
         <main style={{ flex: '1 0 auto' }}>

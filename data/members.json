@@ -55,7 +55,7 @@
     "state_code": "UK",
     "state_name": "Uttarakhand",
     "name": "Dr. Anil Arya",
-    "designation": "Doon Hospital Dehradun \u2013 248001",
+    "designation": "Doon Hospital Dehradun – 248001",
     "institution_location": "",
     "is_active": true
   },
@@ -1788,5 +1788,16 @@
     "designation": "UCMS and GTB Hospital",
     "institution_location": "Delhi",
     "is_active": true
+  },
+  {
+    "membership_id": "DL/CAR/180",
+    "name": "Dr. Sunita Sharma",
+    "designation": "Associate Professor",
+    "institution_location": "Lady Hardinge Medical College, New Delhi",
+    "state_code": "DL",
+    "qualification": "MD (Community Medicine)",
+    "is_active": true,
+    "id": 180,
+    "created_at": "2026-10-18T07:16:44.475Z"
   }
 ]

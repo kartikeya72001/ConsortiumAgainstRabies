@@ -1,52 +1,76 @@
 {
   "patron": {
-    "title": "Patron and Founder President",
     "name": "Dr. A.T. Kannan",
-    "image": "/Patron.jpg",
-    "designation": "Formerly Prof & Head, Dept. of Community Medicine, UCMS & GTB Hospital, Delhi",
-    "messageSnippet": "It is a great honour to take on this endeavour of making India Rabies free with the start of Consortium Against Rabies. The aim of this consortium is to focus on the issues related to Rabies, which is an often neglected disease..."
+    "title": "Patron & Founder President",
+    "designation": "Formerly Prof & Head, Department of Community Medicine, UCMS & GTB Hospital, Delhi",
+    "image": "/leadership/patron_kannan.jpg"
   },
-  "currentExecutive": [
+  "messages": [
     {
-      "role": "President",
-      "name": "Dr. Rajnish",
-      "category": "core"
+      "id": "patron",
+      "role": "Patron & Founder President",
+      "name": "Dr. A.T. Kannan",
+      "designation": "Formerly Prof & Head, Department of Community Medicine, UCMS & GTB Hospital, Delhi",
+      "image": "/leadership/patron_kannan.jpg",
+      "paragraphs": [
+        "It is a great honour to take on this endeavour of making India Rabies free with the start of this organisation 'Consortium Against Rabies'. The aim of this consortium is to focus on the issues related to Rabies, which is an often neglected disease.",
+        "Rabies is a preventable viral disease of mammals most often transmitted through the bite of a rabid animal. In India, about 15 million people are bitten by animals, mostly dogs, every year and need post exposure prophylaxis. There is at present no comprehensive national rabies control program in India or a policy framework. It is left to State Governments and Municipal boards to have initiatives on their own usually with their budgeting. The introduction of intradermal route for rabies vaccine is a huge welcome step in reducing the cost incurred in its prevention. I find that in Rabies, the challenges and opportunities are both great.",
+        "I think we need more advocacy and research on rabies in order to deal with it. We welcome all who intend to fight against this menace to join this movement and make their contribution towards this cause.",
+        "We are on to make full on efforts to prevent and control Rabies. I wish my team all the very best! I also take this opportunity to invite people visiting this site to view the download section and activities, an effort by youngsters showing their commitment and zeal. The consortium would like every one of you to hold hands and give the organisation a big boost and fillip."
+      ]
     },
     {
+      "id": "president",
+      "role": "President",
+      "name": "Dr. G.P. Kaushal",
+      "designation": "Paediatrician, Dr. Baba Saheb Ambedkar Hospital, Rohini, Delhi",
+      "image": "/leadership/president_kaushal.jpg",
+      "paragraphs": [
+        "Formation of Consortium against Rabies (CAR) was conceived and implemented in 2009 with an idea to do something different in the field of Rabies prevention especially in the Northern states of India. There has been considerable brainstorming amongst the like-minded determined experts in the field so that the objectives and vision of this association are achieved & well sustained in times to come.",
+        "This journey started with 15 members under the lead & guidance of Dr. Kannan, first President of CAR, and the dynamism of Dr. Anurag Agarwal, 1st Secretary General of CAR. I feel proud to announce that today we are a family of more than 179 members. These members have joined us only when they are fully convinced with the concept and are determined to work for the same.",
+        "So far, we are successful in carrying activities in 5-6 states through our annual conferences and other midterm CMEs. These annual events have the distinction of being organized in regional Medical Colleges, where we feel that sharing of updated knowledge has maximal impact in terms of benefits to the society at large.",
+        "We have been communicating to our members through email and a preliminary website (managed by Dr. Amir M Khan) and now there is a need for CAR to expand further. The streamlined user interface provides an interactive experience, allowing our colleagues, partners, and prospects to easily find the information they are looking for.",
+        "We hope that you enjoy the fresh look and periodic updates of this website, and find that this portal serves as a valuable resource in the field of Rabies and other zoonotic diseases. Long Live CAR!"
+      ]
+    },
+    {
+      "id": "general-secretary",
       "role": "Hony. Secretary General & Founder",
       "name": "Dr. Anurag Agarwal",
-      "category": "core"
+      "designation": "Associate Professor Paediatrics, Maulana Azad Medical College, New Delhi",
+      "image": "/leadership/gen_sec_anurag.jpg",
+      "paragraphs": [
+        "Rabies is a significant medical and veterinary health problem in developing countries, especially India where approximately 20,000 people lose their life to this illness annually. This figure is just the tip of the iceberg as most cases go unreported. Moreover, the awareness regarding this illness and its data collection is extremely poor amongst health professionals and the general public.",
+        "The basic problem in this country is not advanced scientific research, but spreading awareness on the management of animal bites—such as wound washing, serum, and vaccine administration at the grass-root level. Seeing a perfectly healthy human die due to this incurable disease is heart-breaking.",
+        "Being clinicians, the biggest problem faced by us sitting in the OPD or casualty is how to tackle various issues in patient management on animal bite and the lack of awareness in colleagues and the general public. Keeping this in mind, a group of practicing clinicians got together and organized a movement called CONSORTIUM AGAINST RABIES®.",
+        "This is the sincere effort of our team of dedicated doctors that we have tried to spread awareness and support research in this field to eliminate Rabies. I request all to come forward and join hands in eradicating the menace of rabies in India as many countries have already done."
+      ]
     },
     {
+      "id": "secretary",
       "role": "Hony. Secretary",
       "name": "Dr. Khan Amir Maroof",
-      "category": "core"
-    },
-    {
-      "role": "Hony. Treasurer",
-      "name": "Dr. Deepak Gautam",
-      "category": "core"
-    },
-    {
-      "role": "Vice-President",
-      "name": "Dr. Suma Nair",
-      "category": "vp"
-    },
-    {
-      "role": "Vice-President",
-      "name": "Dr. Rajinder Singh",
-      "category": "vp"
-    },
-    {
-      "role": "Hony. Chief Advisor",
-      "name": "Dr. R.B. Jain",
-      "category": "advisor"
-    },
-    {
-      "role": "Hony. Chief Advisor",
-      "name": "Dr. Anil Arya",
-      "category": "advisor"
+      "designation": "Professor, Department of Community Medicine, UCMS & GTB Hospital, Delhi",
+      "image": "/leadership/sec_amir.jpg",
+      "paragraphs": [
+        "Rabies has been known as a neglected tropical disease, but we strive to bring full attention to this fatal disease and let it not be neglected anymore.",
+        "We have strived to spread awareness among policymakers, healthcare personnel, and communities. We tried to bring all stakeholders, including veterinarians, on a common platform through CMEs and conferences in various states of India. We believe that empowering state leadership with the right information about rabies management will ultimately lead to strengthening of the National Rabies Control Program.",
+        "As young doctors are the future of rabies control in India, we regularly organize national poster competitions and short video competitions to engage Gen Next and spread awareness on online platforms.",
+        "We thank all members and each one who has helped in supporting the cause of the organisation. The support of Indian Association of Preventive and Social Medicine (IAPSM) and Academy of Family Physicians of India (AFPI) deserves special mention.",
+        "We request your support in the future and look forward to expanding our rabies awareness activities in academic, research, medical education, and policy-making domains. Join Consortium Against Rabies to contribute to a Rabies Free India!"
+      ]
     }
+  ],
+  "currentExecutive": [
+    { "role": "Patron & Founder President", "name": "Dr. A.T. Kannan" },
+    { "role": "President", "name": "Dr. G.P. Kaushal" },
+    { "role": "Hony. Secretary General & Founder", "name": "Dr. Anurag Agarwal" },
+    { "role": "Hony. Secretary", "name": "Dr. Khan Amir Maroof" },
+    { "role": "Hony. Treasurer", "name": "Dr. Deepak Gautam" },
+    { "role": "Vice-President", "name": "Dr. Suma Nair" },
+    { "role": "Vice-President", "name": "Dr. Rajinder Singh" },
+    { "role": "Hony. Chief Advisor", "name": "Dr. R.B. Jain" },
+    { "role": "Hony. Chief Advisor", "name": "Dr. Anil Arya" }
   ],
   "pastPresidents": [
     "Dr. A.T. Kannan",

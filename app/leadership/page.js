@@ -1,123 +1,180 @@
 import Link from 'next/link';
-import { Award, UserCheck, ShieldCheck, Mail, BookOpen } from 'lucide-react';
+import { Award, UserCheck, ShieldCheck, HeartPulse, FileText, ArrowRight } from 'lucide-react';
 import officeBearers from '@/data/office_bearers.json';
+import LeadershipMessages from '@/components/LeadershipMessages';
 
 export const metadata = {
-  title: 'Executive Leadership & Office Bearers | Consortium Against Rabies',
-  description: 'Meet the executive committee, founder patron, past presidents, and advisors leading the Consortium Against Rabies across India.',
+  title: 'Executive Leadership & Messages | Consortium Against Rabies',
+  description: 'Read official addresses from the President, Founder Patron, and Honorary Secretaries guiding the Consortium Against Rabies across India.',
 };
 
 export default function LeadershipPage() {
-  const { patron, currentExecutive, pastPresidents, pastTreasurers, pastVicePresidents } = officeBearers;
+  const { messages, currentExecutive, pastPresidents, pastTreasurers, pastVicePresidents } = officeBearers;
 
   return (
-    <div className="section" style={{ background: '#F8FAFC' }}>
+    <div className="section" style={{ background: '#F8FAFC', paddingTop: '3.5rem', paddingBottom: '5rem' }}>
       <div className="container">
         {/* Header */}
-        <div className="section-header">
+        <div className="section-header" style={{ marginBottom: '3rem' }}>
           <span className="section-badge">
-            <Award size={14} /> Governance
+            <Award size={14} /> Governance & Leadership Messages
           </span>
           <h1 className="section-title">Leadership & Executive Council</h1>
           <p className="section-subtitle">
-            Eminent medical professors, clinicians, and researchers guiding the Consortium's national vision and academic mission.
+            Eminent medical professors, paediatricians, and researchers guiding the Consortium's national vision towards zero human rabies deaths in India.
           </p>
         </div>
 
-        {/* Patron Message Card */}
-        <div className="card" style={{ padding: '3rem', marginBottom: '3.5rem', background: '#FFFFFF', borderTop: '5px solid var(--primary)' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '180px 1fr', gap: '2.5rem', alignItems: 'flex-start' }}>
-            <img 
-              src={patron.image} 
-              alt={patron.name} 
-              style={{ width: '100%', borderRadius: 'var(--radius-lg)', boxShadow: 'var(--shadow-md)', border: '4px solid #FFFFFF' }}
-            />
+        {/* Interactive Leadership Messages Section (All 4 Leaders) */}
+        <LeadershipMessages messages={messages} />
+
+        {/* Current Executive Committee */}
+        <div style={{ marginBottom: '4rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '1.75rem', flexWrap: 'wrap', gap: '1rem' }}>
             <div>
-              <span className="badge badge-blue" style={{ marginBottom: '0.4rem' }}>{patron.title}</span>
-              <h2 style={{ fontSize: '1.8rem', color: 'var(--primary-dark)', marginBottom: '0.25rem' }}>
-                {patron.name}
+              <span className="badge badge-teal" style={{ marginBottom: '0.4rem', display: 'inline-block' }}>
+                Governing Body
+              </span>
+              <h2 style={{ fontSize: '1.85rem', color: 'var(--primary-dark)', fontWeight: 800 }}>
+                Current Executive Council
               </h2>
-              <p style={{ fontSize: '0.9rem', color: 'var(--accent-teal-dark)', fontWeight: 600, marginBottom: '1.25rem' }}>
-                {patron.designation}
-              </p>
-              <div style={{ fontSize: '1rem', color: 'var(--text-muted)', lineHeight: '1.7', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <p>
-                  "It is a great honour to take on this endeavour of making India Rabies free with the inception of Consortium Against Rabies. The aim of this consortium is to focus squarely on the issues related to Rabies, which is an often neglected public health disease."
-                </p>
-                <p>
-                  "In India, nearly 15 million people are bitten by animals every year and require prompt post-exposure prophylaxis. The introduction and advocacy of the intradermal route for rabies vaccine has been a huge welcome step in drastically reducing the economic burden on poor families. I welcome every doctor, student, and researcher to join our ranks."
-                </p>
+            </div>
+            <p style={{ color: 'var(--text-light)', fontSize: '0.9rem' }}>
+              Consortium Against Rabies (India)
+            </p>
+          </div>
+
+          <div className="grid-4">
+            {currentExecutive.map((person, idx) => (
+              <div 
+                key={idx} 
+                className="card" 
+                style={{ 
+                  textAlign: 'center', 
+                  padding: '2rem 1.25rem',
+                  background: '#FFFFFF',
+                  border: '1px solid var(--border-subtle)',
+                  transition: 'transform 200ms ease, box-shadow 200ms ease'
+                }}
+              >
+                <div 
+                  style={{ 
+                    width: 60, 
+                    height: 60, 
+                    borderRadius: '50%', 
+                    background: 'var(--primary-subtle)', 
+                    color: 'var(--primary)', 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    margin: '0 auto 1.25rem',
+                    boxShadow: 'var(--shadow-sm)'
+                  }}
+                >
+                  <UserCheck size={28} />
+                </div>
+                <span 
+                  className="badge badge-teal" 
+                  style={{ marginBottom: '0.65rem', fontSize: '0.725rem', display: 'inline-block' }}
+                >
+                  {person.role}
+                </span>
+                <h3 style={{ fontSize: '1.15rem', color: 'var(--primary-dark)', fontWeight: 700 }}>
+                  {person.name}
+                </h3>
               </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Honor Roll: Past Leadership */}
+        <div className="card" style={{ padding: '3rem', background: '#FFFFFF', border: '1px solid var(--border-subtle)', marginBottom: '3.5rem' }}>
+          <div style={{ marginBottom: '2rem' }}>
+            <span className="badge badge-blue" style={{ marginBottom: '0.4rem', display: 'inline-block' }}>
+              Legacy & Service
+            </span>
+            <h2 style={{ fontSize: '1.7rem', color: 'var(--primary-dark)', fontWeight: 800 }}>
+              Honor Roll & Past Leadership
+            </h2>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem' }}>
+              Recognizing the founders, past presidents, and executive officers who shaped the national rabies prevention movement.
+            </p>
+          </div>
+
+          <div className="grid-3" style={{ gap: '2.5rem' }}>
+            <div style={{ background: '#F8FAFC', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid #E2E8F0' }}>
+              <h4 style={{ color: 'var(--primary-dark)', borderBottom: '2px solid var(--primary)', paddingBottom: '0.65rem', marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 700 }}>
+                Past Presidents
+              </h4>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
+                {pastPresidents.map((name, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                    <ShieldCheck size={16} color="#0D9488" style={{ flexShrink: 0 }} /> 
+                    <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>{name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div style={{ background: '#F8FAFC', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid #E2E8F0' }}>
+              <h4 style={{ color: 'var(--primary-dark)', borderBottom: '2px solid var(--accent-teal)', paddingBottom: '0.65rem', marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 700 }}>
+                Past Treasurers
+              </h4>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
+                {pastTreasurers.map((name, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                    <ShieldCheck size={16} color="#0D9488" style={{ flexShrink: 0 }} /> 
+                    <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>{name}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div style={{ background: '#F8FAFC', padding: '1.5rem', borderRadius: 'var(--radius-md)', border: '1px solid #E2E8F0' }}>
+              <h4 style={{ color: 'var(--primary-dark)', borderBottom: '2px solid var(--accent-coral)', paddingBottom: '0.65rem', marginBottom: '1rem', fontSize: '1.1rem', fontWeight: 700 }}>
+                Past Vice Presidents
+              </h4>
+              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.75rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
+                {pastVicePresidents.map((name, i) => (
+                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+                    <ShieldCheck size={16} color="#0D9488" style={{ flexShrink: 0 }} /> 
+                    <span style={{ fontWeight: 600, color: 'var(--text-main)' }}>{name}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
 
-        {/* Current Executive Committee */}
-        <h2 style={{ fontSize: '1.8rem', marginBottom: '1.5rem', color: 'var(--primary-dark)' }}>
-          Current Executive Council
-        </h2>
-
-        <div className="grid-4" style={{ marginBottom: '4rem' }}>
-          {currentExecutive.map((person, idx) => (
-            <div key={idx} className="card" style={{ textAlign: 'center', padding: '1.75rem 1.25rem' }}>
-              <div style={{ width: 64, height: 64, borderRadius: '50%', background: 'var(--primary-subtle)', color: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
-                <UserCheck size={32} />
-              </div>
-              <span className="badge badge-teal" style={{ marginBottom: '0.5rem', fontSize: '0.725rem' }}>
-                {person.role}
-              </span>
-              <h3 style={{ fontSize: '1.15rem', color: 'var(--primary-dark)', marginTop: '0.35rem' }}>
-                {person.name}
-              </h3>
-            </div>
-          ))}
-        </div>
-
-        {/* Honor Roll: Past Leadership */}
-        <div className="card" style={{ padding: '2.5rem', background: '#FFFFFF' }}>
-          <h2 style={{ fontSize: '1.5rem', color: 'var(--primary-dark)', marginBottom: '1.5rem' }}>
-            Honor Roll & Past Leadership
-          </h2>
-
-          <div className="grid-3" style={{ gap: '2rem' }}>
-            <div>
-              <h4 style={{ color: 'var(--primary)', borderBottom: '2px solid var(--primary-subtle)', paddingBottom: '0.5rem', marginBottom: '0.75rem' }}>
-                Past Presidents
-              </h4>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
-                {pastPresidents.map((name, i) => (
-                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <ShieldCheck size={15} color="#0D9488" /> {name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 style={{ color: 'var(--primary)', borderBottom: '2px solid var(--primary-subtle)', paddingBottom: '0.5rem', marginBottom: '0.75rem' }}>
-                Past Treasurers
-              </h4>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
-                {pastTreasurers.map((name, i) => (
-                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <ShieldCheck size={15} color="#0D9488" /> {name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h4 style={{ color: 'var(--primary)', borderBottom: '2px solid var(--primary-subtle)', paddingBottom: '0.5rem', marginBottom: '0.75rem' }}>
-                Past Vice Presidents
-              </h4>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem', color: 'var(--text-muted)', fontSize: '0.95rem' }}>
-                {pastVicePresidents.map((name, i) => (
-                  <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <ShieldCheck size={15} color="#0D9488" /> {name}
-                  </li>
-                ))}
-              </ul>
-            </div>
+        {/* Action Callout */}
+        <div 
+          style={{ 
+            background: 'linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)', 
+            borderRadius: 'var(--radius-lg)', 
+            padding: '2.5rem 3rem',
+            color: '#FFFFFF',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            gap: '1.5rem'
+          }}
+        >
+          <div>
+            <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '0.5rem', color: '#FFFFFF' }}>
+              Join Our National Movement Against Rabies
+            </h3>
+            <p style={{ color: '#E2E8F0', maxWidth: '600px', fontSize: '0.95rem', lineHeight: '1.6' }}>
+              Become a Life Member of CAR to contribute to national guidelines, participate in annual CARCON conferences, and advocate for zero human rabies deaths in India.
+            </p>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <Link href="/apply" className="btn btn-secondary">
+              <HeartPulse size={16} /> Apply for Life Membership
+            </Link>
+            <Link href="/guidelines" className="btn btn-outline" style={{ borderColor: 'rgba(255,255,255,0.4)', color: '#FFFFFF' }}>
+              <FileText size={16} /> PEP Guidelines
+            </Link>
           </div>
         </div>
       </div>

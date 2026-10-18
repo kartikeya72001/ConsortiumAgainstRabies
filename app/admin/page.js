@@ -27,7 +27,9 @@ export default function AdminPage() {
   const [authError, setAuthError] = useState('');
   
   // Data state
+  const [adminTab, setAdminTab] = useState('members'); // 'members' | 'applications'
   const [members, setMembers] = useState(initialMembers);
+  const [applications, setApplications] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [storageSource, setStorageSource] = useState('local'); // 'supabase' or 'local'
   const [loading, setLoading] = useState(false);
@@ -51,6 +53,7 @@ export default function AdminPage() {
     if (savedToken) {
       setIsAuthenticated(true);
       fetchMembers(savedToken);
+      fetchApplications(savedToken);
     }
   }, []);
 
@@ -73,6 +76,7 @@ export default function AdminPage() {
         localStorage.setItem('car_admin_token', data.token);
         setIsAuthenticated(true);
         fetchMembers(data.token);
+        fetchApplications(data.token);
       } else {
         setAuthError(data.error || 'Invalid credentials');
       }
@@ -100,6 +104,67 @@ export default function AdminPage() {
       console.warn('Using local fallback members:', err);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchApplications = async (token) => {
+    const adminToken = token || localStorage.getItem('car_admin_token');
+    if (!adminToken) return;
+    try {
+      const res = await fetch('/api/apply', {
+        headers: { Authorization: `Bearer ${adminToken}` }
+      });
+      if (res.ok) {
+        const data = await res.json();
+        setApplications(data.applications || []);
+      }
+    } catch (err) {
+      console.warn('Failed to fetch applications:', err);
+    }
+  };
+
+  const handleApprove = async (appId) => {
+    const token = localStorage.getItem('car_admin_token') || 'car_admin_2026_secure';
+    try {
+      const res = await fetch('/api/apply', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({ id: appId, action: 'approve' })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        showNotify(data.message || 'Applicant approved and enrolled as Life Member!');
+        fetchMembers(token);
+        fetchApplications(token);
+      } else {
+        showNotify(data.error || 'Approval failed', 'error');
+      }
+    } catch (err) {
+      showNotify('Network error during approval', 'error');
+    }
+  };
+
+  const handleReject = async (appId) => {
+    if (!confirm('Reject this application?')) return;
+    const token = localStorage.getItem('car_admin_token') || 'car_admin_2026_secure';
+    try {
+      const res = await fetch('/api/apply', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        },
+        body: JSON.stringify({ id: appId, status: 'rejected' })
+      });
+      if (res.ok) {
+        showNotify('Application archived/rejected');
+        fetchApplications(token);
+      }
+    } catch (err) {
+      showNotify('Network error', 'error');
     }
   };
 
@@ -376,12 +441,184 @@ export default function AdminPage() {
           </div>
         </div>
 
-        {/* Members Management Table */}
-        <div className="card" style={{ padding: '1.5rem', background: '#FFFFFF' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
-            <h2 style={{ fontSize: '1.4rem', color: 'var(--primary-dark)' }}>
-              Manage Life Members ({filtered.length})
-            </h2>
+        {/* Admin Navigation Tabs */}
+        <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+          <button
+            type="button"
+            onClick={() => setAdminTab('members')}
+            style={{
+              padding: '0.65rem 1.25rem',
+              borderRadius: 'var(--radius-full)',
+              border: adminTab === 'members' ? '2px solid var(--primary)' : '1px solid var(--border-subtle)',
+              background: adminTab === 'members' ? 'var(--primary)' : '#FFFFFF',
+              color: adminTab === 'members' ? '#FFFFFF' : 'var(--text-main)',
+              fontWeight: 700,
+              fontSize: '0.9rem',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              boxShadow: 'var(--shadow-sm)'
+            }}
+          >
+            <Users size={16} />
+            Life Members Directory ({members.length})
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setAdminTab('applications')}
+            style={{
+              padding: '0.65rem 1.25rem',
+              borderRadius: 'var(--radius-full)',
+              border: adminTab === 'applications' ? '2px solid var(--primary)' : '1px solid var(--border-subtle)',
+              background: adminTab === 'applications' ? 'var(--primary)' : '#FFFFFF',
+              color: adminTab === 'applications' ? '#FFFFFF' : 'var(--text-main)',
+              fontWeight: 700,
+              fontSize: '0.9rem',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              boxShadow: 'var(--shadow-sm)'
+            }}
+          >
+            <ShieldCheck size={16} />
+            Membership Applications
+            {applications.filter((a) => a.status === 'pending').length > 0 && (
+              <span style={{ 
+                background: '#E11D48', 
+                color: '#FFFFFF', 
+                borderRadius: 'var(--radius-full)', 
+                padding: '0.15rem 0.5rem', 
+                fontSize: '0.75rem', 
+                fontWeight: 800 
+              }}>
+                {applications.filter((a) => a.status === 'pending').length} New
+              </span>
+            )}
+          </button>
+        </div>
+
+        {adminTab === 'applications' ? (
+          /* ================= APPLICATIONS MANAGEMENT ================= */
+          <div className="card" style={{ padding: '1.5rem', background: '#FFFFFF' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+              <div>
+                <h2 style={{ fontSize: '1.4rem', color: 'var(--primary-dark)' }}>
+                  Pending & Received Membership Applications ({applications.length})
+                </h2>
+                <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+                  Review applicants submitted via the online Apply form. Approving an applicant automatically generates their official CAR Life Member ID and enrolls them into the national registry.
+                </p>
+              </div>
+            </div>
+
+            {applications.length === 0 ? (
+              <div style={{ textAlign: 'center', padding: '3rem 1rem', color: 'var(--text-light)' }}>
+                <ShieldCheck size={48} color="#CBD5E1" style={{ margin: '0 auto 1rem' }} />
+                <p style={{ fontSize: '1.1rem', fontWeight: 600, color: 'var(--text-muted)' }}>No membership applications received yet.</p>
+                <p style={{ fontSize: '0.85rem' }}>When doctors apply at <code>/apply</code>, their applications appear here for executive approval.</p>
+              </div>
+            ) : (
+              <div style={{ overflowX: 'auto' }}>
+                <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', fontSize: '0.875rem' }}>
+                  <thead>
+                    <tr style={{ background: '#F8FAFC', borderBottom: '1px solid var(--border-subtle)', color: 'var(--text-muted)' }}>
+                      <th style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Reference</th>
+                      <th style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Doctor Details</th>
+                      <th style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Council Reg #</th>
+                      <th style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Hospital / Institution</th>
+                      <th style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Location</th>
+                      <th style={{ padding: '0.75rem 1rem', fontWeight: 600 }}>Status</th>
+                      <th style={{ padding: '0.75rem 1rem', fontWeight: 600, textAlign: 'right' }}>Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {applications.map((app) => (
+                      <tr key={app.id || app.reference} style={{ borderBottom: '1px solid var(--border-subtle)' }}>
+                        <td style={{ padding: '0.75rem 1rem', fontFamily: 'monospace', fontWeight: 600, color: 'var(--primary)' }}>
+                          {app.reference}
+                        </td>
+                        <td style={{ padding: '0.75rem 1rem' }}>
+                          <strong style={{ color: 'var(--primary-dark)', display: 'block' }}>{app.fullName}</strong>
+                          <span style={{ fontSize: '0.775rem', color: 'var(--text-muted)' }}>
+                            {app.qualification || 'MBBS'} • {app.speciality || 'General'}
+                          </span>
+                          <div style={{ fontSize: '0.75rem', color: 'var(--text-light)', marginTop: '0.2rem' }}>
+                            {app.email} • {app.phone}
+                          </div>
+                        </td>
+                        <td style={{ padding: '0.75rem 1rem', fontFamily: 'monospace', fontSize: '0.825rem' }}>
+                          {app.registrationNumber}
+                        </td>
+                        <td style={{ padding: '0.75rem 1rem', color: 'var(--text-muted)' }}>
+                          <span style={{ fontWeight: 500 }}>{app.designation}</span>
+                          <div style={{ fontSize: '0.775rem', color: 'var(--text-light)' }}>{app.institution}</div>
+                        </td>
+                        <td style={{ padding: '0.75rem 1rem' }}>
+                          {app.city}, <span className="badge badge-teal" style={{ fontSize: '0.7rem' }}>{app.state}</span>
+                        </td>
+                        <td style={{ padding: '0.75rem 1rem' }}>
+                          {app.status === 'approved' ? (
+                            <div>
+                              <span className="badge badge-green" style={{ background: '#DCFCE7', color: '#16A34A' }}>
+                                Enrolled
+                              </span>
+                              <div style={{ fontSize: '0.75rem', fontFamily: 'monospace', color: 'var(--primary)', marginTop: '0.25rem', fontWeight: 600 }}>
+                                {app.approved_membership_id}
+                              </div>
+                            </div>
+                          ) : app.status === 'rejected' ? (
+                            <span className="badge badge-coral" style={{ background: '#FEE2E2', color: '#DC2626' }}>
+                              Rejected
+                            </span>
+                          ) : (
+                            <span className="badge badge-blue" style={{ background: '#EFF6FF', color: '#2563EB' }}>
+                              Pending Review
+                            </span>
+                          )}
+                        </td>
+                        <td style={{ padding: '0.75rem 1rem', textAlign: 'right' }}>
+                          {app.status === 'pending' ? (
+                            <div style={{ display: 'inline-flex', gap: '0.5rem' }}>
+                              <button
+                                type="button"
+                                onClick={() => handleApprove(app.id)}
+                                className="btn btn-teal btn-sm"
+                                style={{ padding: '0.35rem 0.75rem', fontSize: '0.8rem' }}
+                                title="Approve applicant and enroll as Life Member"
+                              >
+                                Approve & Enroll
+                              </button>
+                              <button
+                                type="button"
+                                onClick={() => handleReject(app.id)}
+                                className="btn btn-outline btn-sm"
+                                style={{ padding: '0.35rem 0.6rem', color: '#E11D48', fontSize: '0.8rem' }}
+                                title="Reject"
+                              >
+                                Reject
+                              </button>
+                            </div>
+                          ) : (
+                            <span style={{ fontSize: '0.8rem', color: 'var(--text-light)' }}>Processed</span>
+                          )}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        ) : (
+          /* ================= MEMBERS MANAGEMENT TABLE ================= */
+          <div className="card" style={{ padding: '1.5rem', background: '#FFFFFF' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', flexWrap: 'wrap', gap: '1rem' }}>
+              <h2 style={{ fontSize: '1.4rem', color: 'var(--primary-dark)' }}>
+                Manage Life Members ({filtered.length})
+              </h2>
 
             <div className="search-box-wrapper" style={{ minWidth: 280 }}>
               <Search className="search-icon-pos" size={16} />
@@ -454,6 +691,7 @@ export default function AdminPage() {
             </table>
           </div>
         </div>
+        )}
 
         {/* Modal for Add / Edit */}
         {showModal && (

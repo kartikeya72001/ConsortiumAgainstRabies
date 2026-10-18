@@ -37,7 +37,39 @@ CREATE POLICY "Admins can manage members"
   USING (true)
   WITH CHECK (true);
 
--- 4. Initial Seed Data (179 Life Members)
+-- 4. Create table for Membership Applications
+CREATE TABLE IF NOT EXISTS membership_applications (
+  id BIGSERIAL PRIMARY KEY,
+  reference VARCHAR(50) UNIQUE NOT NULL,
+  fullName VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  phone VARCHAR(50) NOT NULL,
+  qualification VARCHAR(255),
+  speciality VARCHAR(255),
+  designation VARCHAR(255),
+  institution TEXT,
+  city VARCHAR(100),
+  state VARCHAR(100),
+  registrationNumber VARCHAR(100) NOT NULL,
+  status VARCHAR(50) DEFAULT 'pending',
+  approved_membership_id VARCHAR(50),
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  approved_at TIMESTAMPTZ
+);
+
+ALTER TABLE membership_applications ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Public can submit membership applications"
+  ON membership_applications FOR INSERT
+  WITH CHECK (true);
+
+CREATE POLICY "Admins can manage applications"
+  ON membership_applications FOR ALL
+  TO authenticated
+  USING (true)
+  WITH CHECK (true);
+
+-- 5. Initial Seed Data (179 Life Members)
 INSERT INTO members (id, membership_id, name, designation, institution_location, state_code, state_name)
 VALUES
 (1, 'DL/CAR/001', 'Dr A T Kannan', 'Formerly Prof and Head', 'Department of Community Medicine, UCMS & GTB Hospital Delhi -95.', 'DL', 'Delhi'),

@@ -19,6 +19,8 @@ import {
 export default function ApplyPage() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
+  const [referenceId, setReferenceId] = useState('');
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -36,14 +38,31 @@ export default function ApplyPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setSubmitting(true);
-    // Simulate submission / can call /api/apply
-    setTimeout(() => {
-      setSubmitting(false);
+    setErrorMsg('');
+
+    try {
+      const res = await fetch('/api/apply', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to submit application');
+      }
+
+      setReferenceId(data.reference);
       setSubmitted(true);
-    }, 800);
+    } catch (err) {
+      console.error('Submission error:', err);
+      setErrorMsg(err.message || 'Something went wrong. Please try again or download the offline form.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -88,10 +107,10 @@ export default function ApplyPage() {
               Application Successfully Received!
             </h2>
             <p style={{ color: 'var(--text-muted)', fontSize: '1.05rem', maxWidth: 540, margin: '0 auto 1.5rem', lineHeight: '1.6' }}>
-              Thank you, <strong>{formData.fullName}</strong>. Your provisional membership reference number is <strong>CAR-APP-{Math.floor(1000 + Math.random() * 9000)}</strong>.
+              Thank you, <strong>{formData.fullName}</strong>. Your provisional membership tracking reference is <strong style={{ color: 'var(--primary)', background: 'var(--primary-subtle)', padding: '0.2rem 0.6rem', borderRadius: '4px' }}>{referenceId || 'CAR-APP-PENDING'}</strong>.
             </p>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', maxWidth: 540, margin: '0 auto 2rem' }}>
-              The CAR Honorary Secretariat will review your credentials and reach out to you via email ({formData.email}) with the certificate and registration onboarding details.
+              The CAR Honorary Secretariat has recorded your application. Our executive committee will review your medical council credentials and send onboarding confirmation to <strong>{formData.email}</strong>.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
               <Link href="/members" className="btn btn-primary">
@@ -99,7 +118,21 @@ export default function ApplyPage() {
               </Link>
               <button 
                 type="button"
-                onClick={() => setSubmitted(false)} 
+                onClick={() => {
+                  setSubmitted(false);
+                  setFormData({
+                    fullName: '',
+                    email: '',
+                    phone: '',
+                    qualification: '',
+                    speciality: 'Community Medicine',
+                    designation: '',
+                    institution: '',
+                    city: '',
+                    state: 'Delhi',
+                    registrationNumber: '',
+                  });
+                }} 
                 className="btn btn-outline"
               >
                 Submit Another Application
@@ -119,6 +152,22 @@ export default function ApplyPage() {
                 Download Offline Form (.doc)
               </a>
             </div>
+
+            {errorMsg && (
+              <div 
+                style={{ 
+                  background: 'var(--accent-coral-subtle)', 
+                  border: '1px solid var(--accent-coral)', 
+                  color: 'var(--accent-coral)', 
+                  padding: '1rem', 
+                  borderRadius: 'var(--radius-md)', 
+                  marginBottom: '1.5rem',
+                  fontSize: '0.9rem' 
+                }}
+              >
+                {errorMsg}
+              </div>
+            )}
 
             <form onSubmit={handleSubmit}>
               <div className="grid-2">
