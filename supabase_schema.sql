@@ -260,3 +260,92 @@ ON CONFLICT (membership_id) DO UPDATE SET
 
 -- Fix sequence counter
 SELECT setval('members_id_seq', (SELECT MAX(id) FROM members));
+
+-- ============================================================================
+-- 5. Create table for Executive Leadership (Current Council)
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS leadership (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  role VARCHAR(255) NOT NULL,
+  image TEXT,
+  display_order INTEGER DEFAULT 1,
+  is_active BOOLEAN DEFAULT true,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+ALTER TABLE leadership ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Public leadership viewable by everyone"
+  ON leadership FOR SELECT
+  USING (true);
+
+CREATE POLICY "Enable all access for leadership"
+  ON leadership FOR ALL
+  USING (true)
+  WITH CHECK (true);
+
+-- ============================================================================
+-- 6. Create table for Honor Roll & Past Leadership
+-- ============================================================================
+CREATE TABLE IF NOT EXISTS past_leadership (
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  category VARCHAR(50) NOT NULL, -- 'presidents', 'treasurers', 'vice_presidents', 'members'
+  former_role VARCHAR(255),
+  tenure_years VARCHAR(100),
+  display_order INTEGER DEFAULT 1,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+ALTER TABLE past_leadership ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Public past leadership viewable by everyone"
+  ON past_leadership FOR SELECT
+  USING (true);
+
+CREATE POLICY "Enable all access for past leadership"
+  ON past_leadership FOR ALL
+  USING (true)
+  WITH CHECK (true);
+
+-- Seed Current Leadership
+INSERT INTO leadership (id, name, role, image, display_order, is_active) VALUES
+(1, 'Dr. A.T. Kannan', 'Patron & Founder President', '/leadership/patron_kannan.jpg', 1, true),
+(2, 'Dr. G.P. Kaushal', 'President', '/leadership/president_kaushal.jpg', 2, true),
+(3, 'Dr. Anurag Agarwal', 'Hony. Secretary General & Founder', '/leadership/gen_sec_anurag.jpg', 3, true),
+(4, 'Dr. Khan Amir Maroof', 'Hony. Secretary', '/leadership/sec_amir.jpg', 4, true),
+(5, 'Dr. Deepak Gautam', 'Hony. Treasurer', '/leadership/treasurer_gautam.jpg', 5, true),
+(6, 'Dr. Suma Nair', 'Vice-President', '/leadership/vp_suma_nair.jpg', 6, true),
+(7, 'Dr. Rajinder Singh', 'Vice-President', '/leadership/vp_rajinder_singh.jpg', 7, true),
+(8, 'Dr. R.B. Jain', 'Hony. Chief Advisor', '/leadership/advisor_rb_jain.jpg', 8, true),
+(9, 'Dr. Anil Arya', 'Hony. Chief Advisor', '/leadership/advisor_anil_arya.jpg', 9, true)
+ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  role = EXCLUDED.role,
+  image = EXCLUDED.image,
+  display_order = EXCLUDED.display_order;
+
+SELECT setval(pg_get_serial_sequence('public.leadership', 'id'), (SELECT COALESCE(MAX(id), 1) FROM public.leadership));
+
+-- Seed Past Leadership
+INSERT INTO past_leadership (id, name, category, former_role, display_order) VALUES
+(1, 'Dr. A.T. Kannan', 'presidents', 'Past President', 1),
+(2, 'Dr. Surekha Kishore', 'presidents', 'Past President', 2),
+(3, 'Dr. J.V. Singh', 'presidents', 'Past President', 3),
+(4, 'Dr. G.P. Kaushal', 'presidents', 'Past President', 4),
+(5, 'Dr. Harishankar Joshi', 'presidents', 'Past President', 5),
+(6, 'Dr. G.P. Kaushal', 'treasurers', 'Past Treasurer', 1),
+(7, 'Dr. Rajender Singh', 'treasurers', 'Past Treasurer', 2),
+(8, 'Dr. Naveen', 'vice_presidents', 'Past Vice-President', 1),
+(9, 'Dr. C.M. Singh', 'vice_presidents', 'Past Vice-President', 2),
+(10, 'Dr. Manish Singh', 'vice_presidents', 'Past Vice-President', 3),
+(11, 'Dr. Deepak Saxena', 'vice_presidents', 'Past Vice-President', 4)
+ON CONFLICT (id) DO UPDATE SET
+  name = EXCLUDED.name,
+  category = EXCLUDED.category,
+  former_role = EXCLUDED.former_role,
+  display_order = EXCLUDED.display_order;
+
+SELECT setval(pg_get_serial_sequence('public.past_leadership', 'id'), (SELECT COALESCE(MAX(id), 1) FROM public.past_leadership));

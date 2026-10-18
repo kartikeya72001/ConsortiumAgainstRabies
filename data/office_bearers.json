@@ -65,47 +65,56 @@
     {
       "id": 1,
       "role": "Patron & Founder President",
-      "name": "Dr. A.T. Kannan"
+      "name": "Dr. A.T. Kannan",
+      "image": "/leadership/patron_kannan.jpg"
     },
     {
       "id": 2,
       "role": "President",
-      "name": "Dr. G.P. Kaushal"
+      "name": "Dr. G.P. Kaushal",
+      "image": "/leadership/president_kaushal.jpg"
     },
     {
       "id": 3,
       "role": "Hony. Secretary General & Founder",
-      "name": "Dr. Anurag Agarwal"
+      "name": "Dr. Anurag Agarwal",
+      "image": "/leadership/gen_sec_anurag.jpg"
     },
     {
       "id": 4,
       "role": "Hony. Secretary",
-      "name": "Dr. Khan Amir Maroof"
+      "name": "Dr. Khan Amir Maroof",
+      "image": "/leadership/sec_amir.jpg"
     },
     {
       "id": 5,
       "role": "Hony. Treasurer",
-      "name": "Dr. Deepak Gautam"
+      "name": "Dr. Deepak Gautam",
+      "image": "/leadership/treasurer_gautam.jpg"
     },
     {
       "id": 6,
       "role": "Vice-President",
-      "name": "Dr. Suma Nair"
+      "name": "Dr. Suma Nair",
+      "image": "/leadership/vp_suma_nair.jpg"
     },
     {
       "id": 7,
       "role": "Vice-President",
-      "name": "Dr. Rajinder Singh"
+      "name": "Dr. Rajinder Singh",
+      "image": "/leadership/vp_rajinder_singh.jpg"
     },
     {
       "id": 8,
       "role": "Hony. Chief Advisor",
-      "name": "Dr. R.B. Jain"
+      "name": "Dr. R.B. Jain",
+      "image": "/leadership/advisor_rb_jain.jpg"
     },
     {
       "id": 9,
       "role": "Hony. Chief Advisor",
-      "name": "Dr. Anil Arya"
+      "name": "Dr. Anil Arya",
+      "image": "/leadership/advisor_anil_arya.jpg"
     }
   ],
   "pastPresidents": [

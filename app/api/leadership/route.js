@@ -31,7 +31,7 @@ export async function POST(request) {
       return NextResponse.json({ error: 'Name and Role are required' }, { status: 400 });
     }
 
-    const result = await addLeader({ name: body.name, role: body.role });
+    const result = await addLeader({ name: body.name, role: body.role, image: body.image });
     return NextResponse.json(result, { status: 201 });
   } catch (err) {
     console.error('API POST /api/leadership error:', err);
@@ -50,7 +50,7 @@ export async function PUT(request) {
       return NextResponse.json({ error: 'ID, Name, and Role are required' }, { status: 400 });
     }
 
-    const result = await updateLeader(body.id, { name: body.name, role: body.role });
+    const result = await updateLeader(body.id, { name: body.name, role: body.role, image: body.image });
     if (!result.success) {
       return NextResponse.json({ error: result.error || 'Failed to update leader' }, { status: 404 });
     }

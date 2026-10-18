@@ -64,7 +64,8 @@ export default function AdminPage() {
   const [leaderFormData, setLeaderFormData] = useState({
     name: '',
     role: 'Executive Council Member',
-    customRole: ''
+    customRole: '',
+    image: ''
   });
 
   const fetchLeadership = async () => {
@@ -317,7 +318,7 @@ export default function AdminPage() {
 
   const handleOpenAddLeader = () => {
     setEditingLeader(null);
-    setLeaderFormData({ name: '', role: 'Executive Council Member', customRole: '' });
+    setLeaderFormData({ name: '', role: 'Executive Council Member', customRole: '', image: '' });
     setShowLeaderModal(true);
   };
 
@@ -338,7 +339,8 @@ export default function AdminPage() {
     setLeaderFormData({
       name: leader.name,
       role: isStandard ? leader.role : 'Other',
-      customRole: isStandard ? '' : leader.role
+      customRole: isStandard ? '' : leader.role,
+      image: leader.image || ''
     });
     setShowLeaderModal(true);
   };
@@ -363,7 +365,8 @@ export default function AdminPage() {
           body: JSON.stringify({
             id: editingLeader.id,
             name: leaderFormData.name,
-            role: finalRole
+            role: finalRole,
+            image: leaderFormData.image ? leaderFormData.image.trim() : null
           })
         });
         const data = await res.json();
@@ -383,7 +386,8 @@ export default function AdminPage() {
           },
           body: JSON.stringify({
             name: leaderFormData.name,
-            role: finalRole
+            role: finalRole,
+            image: leaderFormData.image ? leaderFormData.image.trim() : null
           })
         });
         const data = await res.json();
@@ -889,7 +893,34 @@ export default function AdminPage() {
                         {idx + 1}
                       </td>
                       <td style={{ padding: '0.75rem 1rem', fontWeight: 700, color: 'var(--primary-dark)' }}>
-                        {leader.name}
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                          <div 
+                            style={{ 
+                              width: 38, 
+                              height: 38, 
+                              borderRadius: '50%', 
+                              overflow: 'hidden', 
+                              background: 'var(--primary-subtle)', 
+                              flexShrink: 0, 
+                              display: 'flex', 
+                              alignItems: 'center', 
+                              justifyContent: 'center',
+                              boxShadow: '0 2px 5px rgba(0,0,0,0.06)',
+                              border: '1.5px solid #E2E8F0'
+                            }}
+                          >
+                            {leader.image ? (
+                              <img 
+                                src={leader.image} 
+                                alt={leader.name} 
+                                style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                              />
+                            ) : (
+                              <UserCheck size={18} style={{ color: 'var(--primary)' }} />
+                            )}
+                          </div>
+                          <span>{leader.name}</span>
+                        </div>
                       </td>
                       <td style={{ padding: '0.75rem 1rem' }}>
                         <span className="badge badge-teal" style={{ fontSize: '0.8rem', padding: '0.25rem 0.65rem' }}>
@@ -1271,6 +1302,21 @@ export default function AdminPage() {
                     />
                   </div>
                 )}
+
+                <div className="form-group">
+                  <label className="form-label">Portrait Image Path / URL (optional)</label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    placeholder="e.g. /leadership/portrait.jpg or https://..."
+                    value={leaderFormData.image}
+                    onChange={(e) => setLeaderFormData({ ...leaderFormData, image: e.target.value })}
+                    id="leader-image-input"
+                  />
+                  <small style={{ color: 'var(--text-light)', fontSize: '0.75rem', marginTop: '0.25rem', display: 'block' }}>
+                    Available portraits: <code>/leadership/patron_kannan.jpg</code>, <code>/leadership/president_kaushal.jpg</code>, <code>/leadership/gen_sec_anurag.jpg</code>, <code>/leadership/sec_amir.jpg</code>, <code>/leadership/treasurer_gautam.jpg</code>, <code>/leadership/vp_suma_nair.jpg</code>, <code>/leadership/vp_rajinder_singh.jpg</code>, <code>/leadership/advisor_rb_jain.jpg</code>, <code>/leadership/advisor_anil_arya.jpg</code>
+                  </small>
+                </div>
 
                 <div style={{ background: '#F8FAFC', padding: '0.85rem 1rem', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)', marginBottom: '1.25rem', fontSize: '0.825rem', color: 'var(--text-muted)' }}>
                   <strong>Governance Note:</strong> When this leader's active tenure ends and they are removed from office, the system will automatically preserve their record in the <strong>Honor Roll / Past Leadership</strong> archives.

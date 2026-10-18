@@ -64,13 +64,18 @@ export default async function LeadershipPage() {
                   padding: '2rem 1.25rem',
                   background: '#FFFFFF',
                   border: '1px solid var(--border-subtle)',
-                  transition: 'transform 200ms ease, box-shadow 200ms ease'
+                  borderRadius: 'var(--radius-lg)',
+                  boxShadow: '0 2px 8px rgba(15, 23, 42, 0.04)',
+                  transition: 'transform 200ms ease, box-shadow 200ms ease',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center'
                 }}
               >
                 <div 
                   style={{ 
-                    width: 60, 
-                    height: 60, 
+                    width: 76, 
+                    height: 76, 
                     borderRadius: '50%', 
                     background: 'var(--primary-subtle)', 
                     color: 'var(--primary)', 
@@ -78,10 +83,27 @@ export default async function LeadershipPage() {
                     alignItems: 'center', 
                     justifyContent: 'center', 
                     margin: '0 auto 1.25rem',
-                    boxShadow: 'var(--shadow-sm)'
+                    boxShadow: '0 4px 14px rgba(13, 148, 136, 0.15)',
+                    border: '3px solid #FFFFFF',
+                    outline: '2px solid rgba(13, 148, 136, 0.22)',
+                    overflow: 'hidden',
+                    flexShrink: 0
                   }}
                 >
-                  <UserCheck size={28} />
+                  {person.image ? (
+                    <img 
+                      src={person.image} 
+                      alt={person.name} 
+                      style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        objectFit: 'cover',
+                        display: 'block' 
+                      }} 
+                    />
+                  ) : (
+                    <UserCheck size={30} />
+                  )}
                 </div>
                 <span 
                   className="badge badge-teal" 
